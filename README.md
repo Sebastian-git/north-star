@@ -1,6 +1,6 @@
-# Encounters of the Meteor Kind
+# Close Encounters of the Meteor Kind
 
-Created by the team North Star, **Encounters of the Meteor Kind** is a website that uses NASA's Fireball API to inform the user of the date, location and magnitude of fireballs with a search functionality.  
+Created by the team North Star, **Close Encounters of the Meteor Kind** is a website that uses NASA's Fireball API to inform the user of the date, location and magnitude of fireballs with a search functionality.  
 
 ### Tools
 
