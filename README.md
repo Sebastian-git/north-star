@@ -1,27 +1,58 @@
-# Movie App
+# Close Encounters of the Meteor Kind
 
-SEA Movie App is an app for viewing your favorite movie posters.
+Created by the team North Star, **Close Encounters of the Meteor Kind** is a website that uses NASA's Fireball API to inform the user of the date, location and magnitude of fireballs with a search functionality.  
 
-## Installation
+### Tools
 
-Get an API Key from [TMDB](https://www.themoviedb.org/?language=en-US)
+HTML, CSS, JavaScript,  NASA's Fireball API and (Firebase ?).
 
-- Sign up for an account
-- Go to settings -> api
-- Make a .env file
+**Demo:** https://path
 
-```bash
-touch .env
-```
 
-Copy and paste this in to your .env file and add your api key
 
-```
-TMDB_API_KEY=YOUR API KEY HERE
-```
+### User Actions
 
-Then, in your terminal:
-```bash
-npm install
-node app.js
-```
+-  User can search fireballs/meteors occurrences based on date, location and magnitude.
+-  ?????
+-  ?????
+-  ??????
+-  ??????????????????????????????????????
+
+
+### Future Extensions
+
+-  ??????
+-  ??????
+-  ??????
+
+
+
+### Screens
+
+
+
+### User Flow/Site Map 
+
+
+
+### Meet the Team
+
+**Sebastian Cevallos**
+**Role:** Project Manager
+**Github:** [Sebastian-git](https://github.com/Sebastian-git)
+
+**Petula Pascall**
+**Role:** Front-End Developer
+**Github:** [seepetulacode](https://github.com/SeePetulaCode)
+
+**Brandan Herron**
+**Role:** Back-End Developer
+**Github:** [brandan1989](https://github.com/brandan1989)
+
+
+
+### Credits
+
+- ???????
+- ?????
+- ?????
