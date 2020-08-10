@@ -10,9 +10,22 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
-    "ejs": "~2.5.7",
-    "express": "~4.16.0",
+    "ejs": "^2.5.9",
+    "express": "^4.16.4",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
-  }
+    "morgan": "~1.9.0",
+    "node": "^14.7.0"
+  },
+  "description": "Created by the team North Star, **Close Encounters of the Meteor Kind** is a website that uses NASA's Fireball API to inform the user of the date, location and magnitude of fireballs with a search functionality.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebastian-git/north-star.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebastian-git/north-star/issues"
+  },
+  "homepage": "https://github.com/Sebastian-git/north-star#readme"
 }
