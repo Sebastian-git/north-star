@@ -6,7 +6,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // Set ejs as default view engine and set /public as the default directory
 app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/views"));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res) {
   res.render("index");
@@ -14,6 +14,7 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", urlencodedParser, function(req, res) {
+  console.log(req.body);
   res.render("index");
 })
 
