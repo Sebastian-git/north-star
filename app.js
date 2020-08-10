@@ -9,11 +9,13 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
+// Redirect to home page
 app.get("/", function(req, res) {
   res.render("index");
   console.log(req.ip);
 });
 
+// Handles search results
 app.post("/", urlencodedParser, function(req, res) {
   console.log(req.body.min + " and " + req.body.max);
   let maxDate = req.body.max;
@@ -26,19 +28,15 @@ app.post("/", urlencodedParser, function(req, res) {
   axios(config)
   // If request works
   .then(response => {
-    console.log(JSON.stringify(response.data.data[1]));
+    console.log(JSON.stringify(response.data));
     res.render("index", {
-      
     });
   })
+  // Otherwise
   .catch(error => {
     console.log(error);
   });
   
-});
-
-app.get("/", (req, res) => {
-
 });
 
 // Start express/nodemon server
