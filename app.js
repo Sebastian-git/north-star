@@ -1,23 +1,17 @@
-const path = require('path');
-const express = require('express');
-const PORT = process.env.PORT || 3030;
+// Import and initialize all required libraries
+var express = require("express");
+var bodyParser = require("body-parser");
+var app = express();
+var urlencodedParser = bodyParser.urlencoded({extended: false});
 
-require('dotenv').config();
+// Set ejs as default view engine and set /public as the default directory
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/views"));
 
-const indexRouter = require('./routes/index');
-const moviesRouter = require('./routes/movies');
+app.get("/", function(req, res) {
+  res.render("index");
+  console.log(req.ip);
+});
 
-const app = express();
-
-app.set('view engine', 'ejs');
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
-app.use('/movies', moviesRouter);
-
-app.listen(PORT, (err) =>
-  console.log(`${err ? err : `running on PORT ${PORT}`}`),
-);
+// Start express/nodemon server
+app.listen(5000);
