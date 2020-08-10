@@ -24,15 +24,15 @@ h1 {
     font-size: 30px;
 }
 
-/*  */
+/* Navigation */
 .navlinks {
     margin: -35px 50px -10px -10px;
     font-weight: 400;
 }
-div.definition {
+.definition {
     margin: 70px 56px 0px 35px;
 }
-div.search-title {
+.search-title {
     margin: 0px 56px 56px 45px;
 }
 
