@@ -1,10 +1,44 @@
-body {
+* {
     margin: 0;
-    padding: 0;
 }
+.logo {
+    margin: 40px 0px -10px -10px;
+}
+a {
+    color: white;
+    text-decoration: none !important;
+}
+a:hover {
+    color: #f46050;
+}
+h1 {
+    color: #f0d9ab;
+    text-align: left;
+    font-size: 30px;
+}
+p {
+    font-size: 20px;
+}
+ul {
+    list-style-type: none;
+}
+
 .search-contents {
     margin: 10px;
     padding: 10px;
     display: grid;
     text-align: center;
+}
+.navlinks {
+    margin: -35px 50px -10px -10px;
+    font-weight: 400;
+}
+
+
+div.defContent {
+    margin: 70px 56px 0px 35px;
+}
+
+div.searchContent {
+    margin: 0px 56px 56px 45px;
 }
