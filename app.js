@@ -29,8 +29,7 @@ app.post("/", urlencodedParser, function(req, res) {
   // If request works
   .then(response => {
     console.log(JSON.stringify(response.data));
-    res.render("index", {
-    });
+    res.render("index");
   })
   // Otherwise
   .catch(error => {
