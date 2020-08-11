@@ -25,7 +25,7 @@ h1 {
 }
 
 /* Navigation */
-.navlinks {
+.nav-links {
     margin: -35px 50px -10px -10px;
     font-weight: 400;
 }
@@ -48,4 +48,9 @@ h1 {
 }
 .max-date {
     margin: 20px;
+}
+input[name="results"] {
+    margin: 10px;
+    width: 50%;
+    height: 150px;
 }

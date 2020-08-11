@@ -14,7 +14,7 @@
                     <img src="imgs/banner.svg" width="300px">
                 </a>
             </li>
-            <li class="navlinks" style="float:right">
+            <li class="nav-links" style="float:right">
                 <a class="active" href="#about">ABOUT</a>
             </li>
         </ul>
@@ -28,18 +28,20 @@
         </div>
 
         <div class="search-contents">
-            <form id="search-form" method="POST" action="/">
+            <form class="search-form" method="POST" action="/">
                 <div class="min-date">
                     <label for="year">Minimum date:</label>
-                    <input type="date" name="max" value="Example: " required>
+                    <input type="date" name="min" value="2019-06-01" required>
                 </div>
                 <div class="max-date">
                     <label for="year">Maximum date:</label>
-                    <input type="date" name="min" value="Example: " required>
+                    <input type="date" name="max" value="2020-01-01" required>
                 </div>
                 <input type="submit" value="Submit">
+                <div id="search-results">
+                    <input type="text" name="results" disabled>
+                </div>
             </form>
-            
         </div>
 
     </body>
