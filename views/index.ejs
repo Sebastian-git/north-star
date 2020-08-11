@@ -23,9 +23,7 @@
             <img src="imgs/fireball_definition.svg" width="600px">
         </div>
 
-        <div class="search-title">
-            <h1>Search for Fireballs (ANYWHERE IN THE WORLD)</h1>
-        </div>
+        <h1 id="search-title">Search for Fireballs (ANYWHERE IN THE WORLD)</h1>
 
         <div class="search-contents">
             <form class="search-form" method="POST" action="/">
@@ -33,18 +31,23 @@
                     <label for="year">Minimum date:</label>
                     <input type="date" name="min" value="2019-06-01" required>
                 </div>
+
                 <div class="max-date">
                     <label for="year">Maximum date:</label>
                     <input type="date" name="max" value="2020-01-01" required>
                 </div>
+
                 <input type="submit" value="Submit">
+
                 <div class="search-results-box">
+                    <h1 id="result-count"> <%=currentData.length %> Results </h1>
                     <ul class="search-results-line">
                         <% for (let i = 0; i < currentData.length; i++) { %>
                             <li class="search-result"> <%=currentData[i] %> </li>
                         <% } %>
                     </ul>
                 </div>
+
             </form>
         </div>
 

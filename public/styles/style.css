@@ -18,11 +18,6 @@ a {
 a:hover {
     color: #f46050;
 }
-h1 {
-    color: #f0d9ab;
-    text-align: left;
-    font-size: 30px;
-}
 
 /* Navigation */
 .nav-links {
@@ -32,8 +27,11 @@ h1 {
 .definition {
     margin: 70px 56px 0px 35px;
 }
-.search-title {
-    margin: 0px 56px 56px 45px;
+#search-title {
+    color: #f0d9ab;
+    text-align: left;
+    font-size: 30px;
+    margin: 10px 56px 56px 45px;
 }
 
 /* Search portion */
@@ -64,4 +62,9 @@ ul{
 }
 .search-result {
     padding: 10px;
+}
+#result-count {
+    color: white;
+    margin: 50px 10px 10px 10px;
+    text-align: center;
 }

@@ -17,7 +17,6 @@ app.get("/", function(req, res) {
 
 // Handles search results
 app.post("/", urlencodedParser, function(req, res) {
-  console.log(req.body.min + " and " + req.body.max);
   const maxDate = req.body.max;
   const minDate = req.body.min;
   const config = {
@@ -28,15 +27,14 @@ app.post("/", urlencodedParser, function(req, res) {
   axios(config)
   // If request works
   .then(response => {
-    let currentData = [];
     // Add date, energy, velocity, longitude and latitude into array as a string
-    console.log("Count: " + response.data.count);
+    let currentData = [];
     for (let i = 0; i < response.data.count; i++) {
       currentData.push(`${response.data.data[i][0]}, ${response.data.data[i][1]}, ${response.data.data[i][8]}, ${response.data.data[i][5]}, ${response.data.data[i][3]}`);
     }
     console.log(currentData);
     // Push current data array to front end each loop
-    res.render("index", {currentData});
+    res.render("index", {currentData : currentData});
   })
   // Otherwise
   .catch(error => {
