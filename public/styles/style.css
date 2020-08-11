@@ -55,4 +55,8 @@ input[name="results"] {
     height: 150px;
 }
 
+ul{
+    list-style-type: none;
+}
+
 /* Results portion */
