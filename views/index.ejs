@@ -38,10 +38,10 @@
                     <input type="date" name="max" value="2020-01-01" required>
                 </div>
                 <input type="submit" value="Submit">
-                <div class="search-results">
-                    <ul class="results">
+                <div class="search-results-box">
+                    <ul class="search-results-line">
                         <% for (let i = 0; i < currentData.length; i++) { %>
-                            <li> <%=currentData[i] %> </li>
+                            <li class="search-result"> <%=currentData[i] %> </li>
                         <% } %>
                     </ul>
                 </div>
