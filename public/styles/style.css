@@ -50,6 +50,10 @@ h1 {
     margin: 20px;
 }
 
+ul{
+    list-style-type: none;
+}
+
 /* Results portion */
 .search-results-line {
     margin: 30px;
