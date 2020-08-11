@@ -11,11 +11,11 @@ body {
 .logo {
     margin: 40px 0px -10px -10px;
 }
-a {
+#about-link {
     color: white;
     text-decoration: none !important;
 }
-a:hover {
+#about-link:hover {
     color: #f46050;
 }
 
