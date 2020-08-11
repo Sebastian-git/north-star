@@ -29,19 +29,13 @@ app.post("/", urlencodedParser, function(req, res) {
   axios(config)
   // If request works
   .then(response => {
-    const date = response.data.data[0][0]; // Date of peak brightness
-    const energy = response.data.data[0][1]; // Approximate total radiated energy in joules
-    const vel = response.data.data[0][8]; // Velocity at peak brightness
-    const lon = response.data.data[0][5]; // Longitude at peak brightness (degrees)
-    const lat = response.data.data[0][3]; // Latitude at peak brightness (degrees)
     let currentData = [];
+    // Add date, energy, velocity, longitude and latitude into array as a string
     for (let i = 0; i < response.data.count; i++) {
       currentData = [response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3]];
-      // Push current data array to front end each loop
     }
-    console.log("count: " + response.data.count);
-    console.log(`Date: ${date}, Energy: ${energy}, Velocity: ${vel}, Latitude: ${lat}, Longitude: ${lon}`);
-    res.render("index");
+    // Push current data array to front end each loop
+    res.render("index", {currentData});
   })
   // Otherwise
   .catch(error => {
