@@ -16,7 +16,7 @@ app.get("/", function(req, res) {
 });
 
 // Handles search results
-app.post("/", urlencodedParser, function(req, res) {
+app.post("/", urlencodedParser, (req, res) => {
   const maxDate = req.body.max;
   const minDate = req.body.min;
   const config = {
@@ -40,6 +40,10 @@ app.post("/", urlencodedParser, function(req, res) {
   .catch(error => {
     console.log(error);
   });
+});
+
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 // Start express/nodemon server
