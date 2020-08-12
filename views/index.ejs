@@ -29,39 +29,38 @@
             <form class="search-form" method="POST" action="/">
                 <div class="min-date">
                     <label for="year">Minimum date:</label>
-                    <input type="date" name="min" value="2019-06-01" required>
+                    <input type="date" name="min" value="2020-01-01" required>
                 </div>
 
                 <div class="max-date">
                     <label for="year">Maximum date:</label>
-                    <input type="date" name="max" value="2020-01-01" required>
+                    <input type="date" name="max" value="2020-08-12" required>
                 </div>
 
                 <input type="submit" value="Submit">
-
-                <div class="search-results-box">
-                    <h1 id="result-count"> <%=currentData.length %> Results </h1>
-                    <ul class="search-results">
-                        <li>
-                            <% for (let i = 0; i < fieldData.length; i++) { %>
-                                    <p> <strong> <%=fieldData[i] %> </strong> </p>
-                            <% } %>
-                        </li>
-                        <li class="search-result-line">
-                            
-                        </li>
-                        <% for (let i = 0; i < currentData.length; i++) { %>
-                            <li class="search-result-line">
-                            <% for (let j = 0; j < 5; j++) { %>
-                                <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
-                                <p> <%=currentData[i][j] %> </p>
-                            <% } %>
-                            </li>
-                        <% } %>
-                    </ul>
-                </div>
-
             </form>
+
+            <div class="search-results-box">
+                <h1 id="result-count"> <%=currentData.length %> Results </h1>
+                <ul class="search-results">
+                    <li>
+                        <% for (let i = 0; i < fieldData.length; i++) { %>
+                                <p> <strong> <%=fieldData[i] %> </strong> </p>
+                        <% } %>
+                    </li>
+                    <li class="search-result-line">
+                        
+                    </li>
+                    <% for (let i = 0; i < currentData.length; i++) { %>
+                        <li class="search-result-line">
+                        <% for (let j = 0; j < 5; j++) { %>
+                            <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
+                            <p> <%=currentData[i][j] %> </p>
+                        <% } %>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
         </div>
 
     </body>
