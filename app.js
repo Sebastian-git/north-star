@@ -12,7 +12,7 @@ app.use(express.static(__dirname + "/public"));
 
 // Redirect to home page
 app.get("/", function(req, res) {
-  res.render("index", {currentData : []});
+  res.render("index", {currentData: [], fieldData: []});
 });
 
 // Handles search results
@@ -30,11 +30,11 @@ app.post("/", urlencodedParser, function(req, res) {
     // Add date, energy, velocity, longitude and latitude into array as a string
     let currentData = [];
     for (let i = 0; i < response.data.count; i++) {
-      currentData.push(`${response.data.data[i][0]}, ${response.data.data[i][1]}, ${response.data.data[i][8]}, ${response.data.data[i][5]}, ${response.data.data[i][3]}`);
+      currentData.push([response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3]]);
     }
-    console.log(currentData);
+    fieldData = ["Date/Time", "Energy", "Altitude", "Longitude", "Latitude"];
     // Push current data array to front end each loop
-    res.render("index", {currentData : currentData});
+    res.render("index", {currentData, fieldData});
   })
   // Otherwise
   .catch(error => {

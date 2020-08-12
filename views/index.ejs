@@ -41,9 +41,22 @@
 
                 <div class="search-results-box">
                     <h1 id="result-count"> <%=currentData.length %> Results </h1>
-                    <ul class="search-results-line">
+                    <ul class="search-results">
+                        <li>
+                            <% for (let i = 0; i < fieldData.length; i++) { %>
+                                    <p> <strong> <%=fieldData[i] %> </strong> </p>
+                            <% } %>
+                        </li>
+                        <li class="search-result-line">
+                            
+                        </li>
                         <% for (let i = 0; i < currentData.length; i++) { %>
-                            <li class="search-result"> <%=currentData[i] %> </li>
+                            <li class="search-result-line">
+                            <% for (let j = 0; j < 5; j++) { %>
+                                <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
+                                <p> <%=currentData[i][j] %> </p>
+                            <% } %>
+                            </li>
                         <% } %>
                     </ul>
                 </div>
