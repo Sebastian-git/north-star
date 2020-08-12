@@ -18,7 +18,9 @@ body {
 #about-link:hover {
     color: #f46050;
 }
-
+li {
+    list-style-type: none;
+}
 /* Navigation */
 .nav-links {
     margin: -35px 50px -10px -10px;
@@ -35,6 +37,9 @@ body {
 }
 
 /* Search portion */
+.search-form {
+    margin: 0 0 50px 0;
+}
 .search-contents {
     margin: 10px;
     padding: 10px;
@@ -67,7 +72,7 @@ body {
     align-items: center;
 }
 .search-result-line:hover {
-    background-color: #fffafae8;
+    background-color: #fffafa75;
 }
 #result-count {
     color: white;
