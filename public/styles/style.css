@@ -11,13 +11,34 @@ body {
 .logo {
     margin: 40px 0px -10px -10px;
 }
-#about-link {
+
+/* #about-link {
     color: white;
     text-decoration: none !important;
 }
 #about-link:hover {
     color: #f46050;
+} */
+a {
+    color: white;
+    text-decoration: none !important;
 }
+a:hover {
+    color: #f46050;
+}
+
+p a {
+    color: #f46050;
+    text-decoration: none !important;
+}
+p a:hover {
+    color: #f46050;
+}
+
+
+
+
+
 li {
     list-style-type: none;
 }
@@ -79,3 +100,73 @@ li {
     margin: 50px 10px 10px 10px;
     text-align: center;
 }
+
+.about-content {
+    color: white;
+    margin: 50px 10px 10px 40px;
+
+}
+
+.mask-circle {
+    clip-path: circle(60px at center);
+    stroke: white;
+  }
+
+
+
+
+/* Form style - Button      */
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: #f0d9ab;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: #f0d9ab; 
+    color: black; 
+  }
+  
+  .button1:hover {
+    background-color: #f46050;
+    color: white;
+  }
+  
+  input[type=text] {
+      color: white;
+      font-size: 18px;
+      padding: 5px 20px;
+      width: 100px;
+      background-color: #f0d9ab;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid white;\
+      text-align: left;
+      
+  
+    
+    }
+  
+  /* Video background   */
+  
+  #video-background {
+      position: fixed;
+      right: 0; 
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      width: auto; 
+      height: auto;
+      z-index: -100;
+    }
+  
+  
