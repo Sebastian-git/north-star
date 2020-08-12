@@ -12,7 +12,7 @@ app.use(express.static(__dirname + "/public"));
 
 // Redirect to home page
 app.get("/", function(req, res) {
-  res.render("index");
+  res.render("index", {currentData : []});
 });
 
 // Handles search results
