@@ -7,18 +7,13 @@ body {
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
+    color: ;
 }
 .logo {
     margin: 40px 0px -10px -10px;
 }
 
-/* #about-link {
-    color: white;
-    text-decoration: none !important;
-}
-#about-link:hover {
-    color: #f46050;
-} */
+
 a {
     color: white;
     text-decoration: none !important;
@@ -48,18 +43,19 @@ li {
     font-weight: 400;
 }
 .definition {
-    margin: 70px 56px 0px 35px;
+    margin: 0px 56px 0px 35px;
+    align-content: center;
 }
 #search-title {
     color: #f0d9ab;
-    text-align: left;
+    text-align: center;
     font-size: 30px;
-    margin: 10px 56px 56px 45px;
+    margin: 30px 56px 0px 25px;
 }
 
 /* Search portion */
 .search-form {
-    margin: 0 0 50px 0;
+    margin: 0 0 0px 0;
 }
 .search-contents {
     margin: 10px;
@@ -68,15 +64,46 @@ li {
     text-align: center;
 }
 .min-date {
-    color: white;
     margin: 80px 20px 20px 20px;
-}
-.max-date {
+    display: inline;
+    font-weight: bold;
     color: white;
-    margin: 20px;
+    font-size: 18px;
 }
 
-/* Results portion */
+.max-date {
+    margin: 20px 0px;
+    display: inline-block;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    
+}
+input[name="results"] {
+    margin: 10px;
+    width: 50%;
+    height: 150px;
+    font-size: 18px;
+    
+}
+
+input[type=date] {
+    color: white;
+    font-size: 18px;
+    padding: 5px 20px;
+    width: 180px;
+    background-color: #f0d9ab;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;\
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    
+
+  
+  }
+
+
 .search-results {
     list-style-type: none;
     background-color: #ffffff93;
@@ -96,7 +123,7 @@ li {
     background-color: #fffafa75;
 }
 #result-count {
-    color: white;
+    color: #f0d9ab;;
     margin: 50px 10px 10px 10px;
     text-align: center;
 }
@@ -141,20 +168,7 @@ li {
     color: white;
   }
   
-  input[type=text] {
-      color: white;
-      font-size: 18px;
-      padding: 5px 20px;
-      width: 100px;
-      background-color: #f0d9ab;
-      background: transparent;
-      border: none;
-      border-bottom: 2px solid white;\
-      text-align: left;
-      
   
-    
-    }
   
   /* Video background   */
   
