@@ -42,6 +42,7 @@ app.post("/", urlencodedParser, (req, res) => {
   });
 });
 
+// Redirect to about page
 app.get("/about", (req, res) => {
   res.render("about");
 });
