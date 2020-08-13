@@ -157,6 +157,14 @@ input[type=date] {
     background-color: #f46050;
     color: white;
   }
+
+  .button_star {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    align-content: center;
+  }
   
   
   
