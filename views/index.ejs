@@ -20,24 +20,25 @@
         </ul>
 
         <div class="definition">
-            <img src="imgs/fireball_definition.svg" width="600px">
+            <img src="imgs/fireball_definition.svg" width="700px">
         </div>
 
-        <h1 id="search-title">Search for Fireballs (ANYWHERE IN THE WORLD)</h1>
+        
 
         <div class="search-contents">
+            <h1 id="search-title">Search for Fireballs (ANYWHERE IN THE WORLD)</h1>
             <form class="search-form" method="POST" action="/">
                 <div class="min-date">
-                    <label for="year">Minimum date:</label>
+                    <label for="year">Start Date:</label>
                     <input type="date" name="min" value="2020-01-01" required>
                 </div>
 
                 <div class="max-date">
-                    <label for="year">Maximum date:</label>
+                    <label for="year">End Date:</label>
                     <input type="date" name="max" value="2020-08-12" required>
                 </div>
 
-                <input type="submit" value="Submit">
+                <input class="button button1" type="submit" value="Submit">
             </form>
 
             <div class="search-results-box">
@@ -62,6 +63,12 @@
                 </ul>
             </div>
         </div>
+
+
+        <video autoplay loop id="video-background" poster="../public/imgs/back1.jpg" muted>
+            <source src="../imgs/meteor2.mp4" type="video/mp4">
+          </video>
+
 
     </body>
 </html>
