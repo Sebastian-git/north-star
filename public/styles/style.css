@@ -7,7 +7,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
-    color: ;
 }
 .logo {
     margin: 40px 0px -10px -10px;
@@ -29,14 +28,10 @@ p a {
 p a:hover {
     color: #f46050;
 }
-
-
-
-
-
 li {
     list-style-type: none;
 }
+
 /* Navigation */
 .nav-links {
     margin: -35px 50px -10px -10px;
@@ -83,23 +78,19 @@ li {
     color: white;
     font-size: 18px;
 }
-
 .max-date {
     margin: 20px 0px;
     display: inline-block;
     font-weight: bold;
     color: white;
     font-size: 18px;
-    
 }
 input[name="results"] {
     margin: 10px;
     width: 50%;
     height: 150px;
     font-size: 18px;
-    
 }
-
 input[type=date] {
     color: white;
     font-size: 18px;
@@ -108,13 +99,10 @@ input[type=date] {
     background-color: #f0d9ab;
     background: transparent;
     border: none;
-    border-bottom: 2px solid white;\
+    border-bottom: 2px solid white;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
-  
-  }
-
-
+}
 .search-results {
     list-style-type: none;
     background-color: #ffffff93;
@@ -127,7 +115,7 @@ input[type=date] {
     list-style-type: none;
     color: black;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
 }
 .search-result-line:hover {
@@ -139,15 +127,9 @@ input[type=date] {
     margin: 50px 10px 10px 10px;
     text-align: center;
 }
-
-
-
-.mask-circle {
-    clip-path: circle(60px at center);
-    stroke: white;
-  }
-
-
+#favorites {
+    width: 10px;
+}
 
 
 /* Form style - Button      */

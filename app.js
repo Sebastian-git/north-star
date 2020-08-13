@@ -30,9 +30,9 @@ app.post("/", urlencodedParser, (req, res) => {
     // Add date, energy, velocity, longitude and latitude into array as a string
     let currentData = [];
     for (let i = 0; i < response.data.count; i++) {
-      currentData.push([response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3]]);
+      currentData.push([response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3], " "]);
     }
-    fieldData = ["Date/Time", "Energy", "Altitude", "Longitude", "Latitude"];
+    fieldData = ["Date/Time", "Energy", "Altitude", "Longitude", "Latitude", "Favorites"];
     // Push current data array to front end each loop
     res.render("index", {currentData, fieldData});
   })
@@ -42,6 +42,7 @@ app.post("/", urlencodedParser, (req, res) => {
   });
 });
 
+// Redirect to about page
 app.get("/about", (req, res) => {
   res.render("about");
 });
