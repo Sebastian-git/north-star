@@ -53,6 +53,19 @@ li {
     margin: 30px 56px 0px 25px;
 }
 
+.about-title {
+    color: #f0d9ab;
+    text-align: left;
+    font-size: 28px;
+    margin: 30px 0px 0px 0px;
+}
+
+.about-contents {
+    color: white;
+    margin: 80px 40px 10px 40px;
+
+}
+
 /* Search portion */
 .search-form {
     margin: 0 0 0px 0;
@@ -98,8 +111,6 @@ input[type=date] {
     border-bottom: 2px solid white;\
     text-align: left;
     font-family: 'Open Sans', sans-serif;
-    
-
   
   }
 
@@ -129,11 +140,7 @@ input[type=date] {
     text-align: center;
 }
 
-.about-content {
-    color: white;
-    margin: 50px 10px 10px 40px;
 
-}
 
 .mask-circle {
     clip-path: circle(60px at center);
