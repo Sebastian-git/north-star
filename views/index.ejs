@@ -49,21 +49,23 @@
                                 <p> <strong> <%=fieldData[i] %> </strong> </p>
                         <% } %>
                     </li>
-                    <li class="search-result-line">
-                        
-                    </li>
+               
                     <% for (let i = 0; i < currentData.length; i++) { %>
                         <li class="search-result-line">
-                        <% for (let j = 0; j < 5; j++) { %>
-                            <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
-                            <p> <%=currentData[i][j] %> </p>
+                        <% for (let j = 0; j < 6; j++) { %>
+                            <% if (j === 5) { %> 
+                                <button id="favorites">[]</button>
+                            <% } %>
+                            <% if (j !== 5) { %>
+                                <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
+                                    <p> <%=currentData[i][j] %> </p>
+                                <% } %>
                         <% } %>
                         </li>
                     <% } %>
                 </ul>
             </div>
         </div>
-
 
         <video autoplay loop id="video-background" poster="../public/imgs/back1.jpg" muted>
             <source src="../imgs/meteor2.mp4" type="video/mp4">
