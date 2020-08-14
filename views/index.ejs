@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Close Encounters of the Meteor Kind</title>
         <link href="styles/style.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/94d9f1d0dc.js"></script>
     </head>
 
     <body> 
@@ -54,7 +55,10 @@
                         <li class="search-result-line">
                         <% for (let j = 0; j < 6; j++) { %>
                             <% if (j === 5) { %> 
-                                <button id="favorites">[]</button>
+                                <button id="favorites" class="button_star">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-star" aria-hidden="true"></i>-->
+                                </button>
                             <% } %>
                             <% if (j !== 5) { %>
                                 <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
@@ -67,7 +71,7 @@
             </div>
         </div>
 
-        <video autoplay loop id="video-background" poster="../public/imgs/back1.jpg" muted>
+        <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
             <source src="../imgs/meteor2.mp4" type="video/mp4">
           </video>
 
