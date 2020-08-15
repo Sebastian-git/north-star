@@ -5,10 +5,13 @@ const bodyParser = require("body-parser");
 const { Router } = require("express");
 const app = express();
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
+require("dotenv").config();
+const userRouter = require("./routes/userRoutes");
 
 // Set ejs as default view engine and set /public as the default directory
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use("/user", userRouter);
 
 // Redirect to home page
 app.get("/", function(req, res) {
