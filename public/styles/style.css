@@ -1,4 +1,4 @@
-/* Page background css */
+/* General page css */
 body {
     background-color: #0a0422;
     background: url("../imgs/back1.jpg") no-repeat center center fixed;
@@ -28,6 +28,30 @@ p a:hover {
 li {
     list-style-type: none;
 }
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: #f0d9ab;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  #video-background {
+    position: fixed;
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -100;
+}
 
 /* Navigation */
 .nav-links {
@@ -56,7 +80,7 @@ li {
 
 }
 
-/* Search portion */
+/* Search */
 .search-form {
     margin: 0 0 0px 0;
 }
@@ -98,6 +122,16 @@ input[type=date] {
     text-align: left;
     font-family: 'Open Sans', sans-serif;
 }
+.button1 {
+    background-color: #f0d9ab; 
+    color: black; 
+  }
+.button1:hover {
+    background-color: #f46050;
+    color: white;
+}
+
+/* Search results */
 .search-results {
     list-style-type: none;
     background-color: #ffffff93;
@@ -123,48 +157,12 @@ input[type=date] {
     text-align: center;
 }
 #favorites {
-    width: 10px;
+    outline: none;
 }
-
-/* Form style - Button      */
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: #f0d9ab;
-    padding: 8px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 4px 20px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-  .button1 {
-    background-color: #f0d9ab; 
-    color: black; 
-  }
-  .button1:hover {
-    background-color: #f46050;
-    color: white;
-  }
-  .button_star {
+.button-star {
     background-color: transparent;
     border: none;
     font-size: 24px;
     cursor: pointer;
     align-content: center;
-  }
-  
-  /* Video background   */
-  #video-background {
-      position: fixed;
-      right: 0; 
-      bottom: 0;
-      min-width: 100%; 
-      min-height: 100%;
-      width: auto; 
-      height: auto;
-      z-index: -100;
-    }
+}

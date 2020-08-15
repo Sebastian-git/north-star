@@ -29,7 +29,7 @@
                     <input type="date" name="max" value="2020-08-12" required>
                 </div>
 
-                <input class="button button1" type="submit" value="Submit">
+                <input class="submit" type="submit" value="Submit">
             </form>
 
             <div class="search-results-box">
@@ -44,9 +44,8 @@
                         <li class="search-result-line">
                         <% for (let j = 0; j < 6; j++) { %>
                             <% if (j === 5) { %> 
-                                <button id="favorites" class="button_star">
+                                <button id="favorites" class="button-star">
                                   <i class="fa fa-star-o" aria-hidden="true"></i>
-                                    <!-- <i class="fa fa-star" aria-hidden="true"></i>-->
                                 </button>
                             <% } %>
                             <% if (j !== 5) { %>
