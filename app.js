@@ -50,5 +50,11 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
+// Redirect to signup page
+app.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
+
 // Start express/nodemon server
 app.listen(5000);
