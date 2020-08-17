@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Initialize global variables
+=======
+// Adding global variables
+>>>>>>> 39ca7436df5d534e1fcd9be58c1e013ef1ce5988
 const app = require('firebase/app')
 require('firebase/auth')
 require('firebase/firestore')
@@ -20,12 +24,20 @@ class Firebase {
         this.db = app.firestore()
     }
 
+<<<<<<< HEAD
     // Firebase's auth API
+=======
+// Auth API
+>>>>>>> 39ca7436df5d534e1fcd9be58c1e013ef1ce5988
     doCreateUserWithEmailAndPassword = (email, password) => {
         return this.auth.createUserWithEmailAndPassword(email, password)
     }
 
+<<<<<<< HEAD
     // Firebase's user API
+=======
+// User API
+>>>>>>> 39ca7436df5d534e1fcd9be58c1e013ef1ce5988
     doCreateUser = (id, user) => {
         return this.db.collection('users').doc(id).set(user);
     }
