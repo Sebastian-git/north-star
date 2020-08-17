@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 // Initialize global variables
-=======
-// Create global variables
->>>>>>> 39ca7436df5d534e1fcd9be58c1e013ef1ce5988
 const express = require('express');
 const router = express.Router();
 const firebase = require('../config/firebase')
@@ -12,11 +8,7 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Movie App', error: req.app.locals.err });
 });
 
-<<<<<<< HEAD
 // Post signup account info
-=======
-// Reroute after you sign in
->>>>>>> 39ca7436df5d534e1fcd9be58c1e013ef1ce5988
 router.post('/signup', (req, res) => {
   firebase.doCreateUserWithEmailAndPassword(req.body.email, req.body.password)
     .then(authUser => {
