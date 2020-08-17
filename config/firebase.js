@@ -1,5 +1,5 @@
+// Adding global variables
 const app = require('firebase/app')
-
 require('firebase/auth')
 require('firebase/firestore')
 
@@ -20,14 +20,12 @@ class Firebase {
         this.db = app.firestore()
     }
 
-    // ** AUTH API **
-
+// Auth API
     doCreateUserWithEmailAndPassword = (email, password) => {
         return this.auth.createUserWithEmailAndPassword(email, password)
     }
 
-    // ** USER API **
-
+// User API
     doCreateUser = (id, user) => {
         return this.db.collection('users').doc(id).set(user);
     }
@@ -38,5 +36,4 @@ class Firebase {
 }
 
 const firebase = new Firebase()
-
 module.exports = firebase

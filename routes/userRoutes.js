@@ -1,13 +1,14 @@
+// Create global variables
 const express = require('express');
 const router = express.Router();
-
 const firebase = require('../config/firebase')
 
-/* GET home page. */
+// Get home page
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Movie App', error: req.app.locals.err });
 });
 
+// Reroute after you sign in
 router.post('/signup', (req, res) => {
   firebase.doCreateUserWithEmailAndPassword(req.body.email, req.body.password)
     .then(authUser => {
