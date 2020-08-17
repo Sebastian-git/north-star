@@ -3,3 +3,9 @@ package-lock.json
 .DS_Store
 public/.DS_Store
 .env
+database.rules.json
+.firebaserc
+firebase.rules
+firebase.json
+firestore.rules
+firestore.indexes.json
