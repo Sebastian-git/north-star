@@ -1,0 +1,121 @@
+body {
+    background-color: #fff7fd;
+    background-image: url("../img/background.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    font-family: arial;
+}
+
+.content-box {
+    margin: 20vh auto 0 auto;
+}
+
+.signup-form, .login-form {
+    text-align: center;
+    background: #fff;
+    width: 32%;
+    max-height: 50vh;
+    margin: 0 auto;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 30px #0005;
+    border-radius: 2%;
+    padding: 1% 0 0 0;
+}
+.login-form {
+    height: 43vh;
+}
+
+.error-box {
+    text-align: center;
+    background: #85002852;
+    color: #a10030;
+    font-size: 17px;
+    width: 32%;
+    height: 5vh;
+    margin: 1vh auto;
+    border-radius: 5px;
+    border: 1px solid #a100304d;
+    box-shadow: 1px 1px 30px #0005;
+}
+.error-message {
+    margin: 2% 0 1% 0;
+}
+
+#auth-title {
+    background: #c896f64d;
+    font-size: 30px;
+    margin: 0 5% 0 5%;
+    padding: 1% 0;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.auth-inputs {
+    background: #fff0;
+    margin: 0 3% 0 3%;
+    padding: 10% 0;
+    border-radius: 1%;
+}
+
+.auth-input {
+    background: #eee;
+    font-size: 18px;
+    margin: 0 0 3% 0;
+    padding: 1% 2%;
+    width: 90%;
+    border: 1px solid transparent;
+    border-radius: 1%;
+    box-shadow: 0;
+    transition-duration: .2s;
+}
+.auth-input:hover {
+    background: #ddd;
+}
+.auth-input:focus {
+    background: #d3d3d3;
+    border: 1px solid #ddd;
+}
+
+.hr-box {
+    margin: 5% 2% 0 2%;
+}
+hr {
+    border: 1px solid #00000031;
+}
+
+.submit-button {
+    background: #f3c7f5;
+    color: #000;
+    margin-top: 5%;
+    padding: 2% 9vw;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #ddd3;
+    border-radius: 30px;
+    transition-duration: .2s;
+}
+.submit-button:hover {
+    cursor: pointer;
+    background: #f3c7f5a0;
+    border: 1px solid #aaa;
+}
+.submit-button:active {
+    background: #d6b1dda0;
+}
+
+.back-box {
+    text-align: center;
+    margin: 1% auto;
+    width: 10vw;
+    height: 5%;
+}
+
+.back-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #793573;
+    transition-duration: .1s;
+}
+.back-link:hover {
+    color: #3f1c3c;
+}

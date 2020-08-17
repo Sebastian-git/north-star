@@ -1,4 +1,4 @@
-// Adding global variables
+// Initialize global variables
 const app = require('firebase/app')
 require('firebase/auth')
 require('firebase/firestore')
@@ -20,12 +20,12 @@ class Firebase {
         this.db = app.firestore()
     }
 
-// Auth API
+    // Firebase's auth API
     doCreateUserWithEmailAndPassword = (email, password) => {
         return this.auth.createUserWithEmailAndPassword(email, password)
     }
 
-// User API
+    // Firebase's user API
     doCreateUser = (id, user) => {
         return this.db.collection('users').doc(id).set(user);
     }
