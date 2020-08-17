@@ -58,6 +58,17 @@ li {
     margin: -35px 50px -10px -10px;
     font-weight: 400;
 }
+
+#fav-link {
+    margin: 0px 20px 0px 0px;
+  
+}
+
+#about-link {
+    margin: 0px 0px 0px 0px;
+  
+}
+
 .definition {
     margin: 0px 56px 0px 35px;
     align-content: center;
