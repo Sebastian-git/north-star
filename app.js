@@ -55,6 +55,5 @@ app.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-
 // Start express/nodemon server
 app.listen(5000);
