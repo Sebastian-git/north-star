@@ -32,8 +32,7 @@ router.post("/searchResults", (req, res) => {
 });
 
 router.post("/favorite", (req, res) => {
-  var ref = database.ref("favorites");
-  ref.push(currentData[i]);
+  console.log(req.body);
 })
 
 module.exports = router;
