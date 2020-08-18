@@ -31,20 +31,6 @@ p a:hover {
 li {
     list-style-type: none;
 }
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: #f0d9ab;
-    padding: 8px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 600;
-    margin: 4px 20px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
   #video-background {
     position: fixed;
     right: 0; 
@@ -187,10 +173,11 @@ input[type=date] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     margin: 4px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 150px;
+    transition-duration: 0.4s;
   }
 
   .button:hover {
@@ -201,9 +188,9 @@ input[type=date] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     margin: 4px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 150px;
   }
 
