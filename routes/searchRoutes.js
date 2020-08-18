@@ -31,6 +31,10 @@ router.post("/searchResults", (req, res) => {
   });
 });
 
+router.get("/favorites", (req, res) => {
+  res.render("favorites");
+})
+
 router.post("/favorite", (req, res) => {
   console.log(req.body);
   firebase.doSaveFireball(req.body.favorites);
