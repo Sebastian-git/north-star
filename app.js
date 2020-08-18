@@ -25,7 +25,9 @@ app.use(
 app.use((req, res, next) => {
     res.locals.user = req.session.user;
     next();
-});  
+}); 
+
+app.use("/register", userRouter);
 
 // Redirect to home page
 app.get("/", function(req, res) {
@@ -47,8 +49,6 @@ app.get("/login", (req, res) => {
 });
 
 app.use("/", searchRouter);
-
-app.use("/", userRouter)
 
 // Start express/nodemon server
 app.listen(process.env.PORT || 5000);
