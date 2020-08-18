@@ -96,7 +96,7 @@ li {
 }
 
 .signup-contents {
-    color: white;
+   
     margin: 80px 40px 10px 40px;
 
 }
@@ -177,7 +177,7 @@ input[type=date] {
 }
 
 .button {
-    background-color: #e3a220;
+    background-color: #ec8f1b;
     border: none;
     color: white;
     padding: 10px;
@@ -185,9 +185,25 @@ input[type=date] {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 4px;
+    margin: 4px 20px;
     border-radius: 20px;
+    width: 150px;
   }
+
+  .button:hover {
+    background-color: #f46050;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 20px;
+    border-radius: 20px;
+    width: 150px;
+  }
+
 
 .button1 {
     background-color: #f0d9ab; 
