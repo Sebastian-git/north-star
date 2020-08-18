@@ -1,7 +1,7 @@
 // Initialize global variables
 const express = require('express');
 const router = express.Router();
-const firebase = require('../config/firebase')
+const firebase = require('../config/firebase');
 
 // Get home page
 router.get('/', (req, res, next) => {
@@ -32,6 +32,5 @@ router.get('/signup', async (req, res) => {
     user: user.data()
   })
 })
-
 
 module.exports = router;
