@@ -11,6 +11,9 @@ body {
 .logo {
     margin: 40px 0px -10px -10px;
 }
+
+}
+
 a {
     color: white;
     text-decoration: none !important;
@@ -79,7 +82,7 @@ li {
     color: #f0d9ab;
     text-align: center;
     font-size: 28px;
-    margin: 20px 0 0 0;
+    margin: 30px 0 10px 0;
 }
 
 #search-title {
@@ -97,7 +100,7 @@ li {
 
 .signup-contents {
    
-    margin: 80px 40px 10px 40px;
+    margin: 80px 0px 10px 0px;
 
 }
 
