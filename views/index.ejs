@@ -46,7 +46,8 @@
                         <% for (let j = 0; j < 6; j++) { %>
                             <% if (j === 5) { %> 
                                 <form method="POST" action="/favorite">
-                                    <button id="favorites" class="button-star">
+                                    <input name="favorites" value="<%= currentData[i] %>" type="hidden">
+                                    <button id="favorite" class="button-star">
                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                     </button>
                                 </form>

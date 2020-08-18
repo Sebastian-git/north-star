@@ -17,7 +17,7 @@ router.post("/searchResults", (req, res) => {
   // If request works
   .then(response => {
     // Add date, energy, velocity, longitude and latitude into array as a string
-    let currentData = [];
+    let currentData = []; 
     for (let i = 0; i < response.data.count; i++) {
       currentData.push([response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3], " "]);
     }
@@ -33,6 +33,7 @@ router.post("/searchResults", (req, res) => {
 
 router.post("/favorite", (req, res) => {
   console.log(req.body);
+  firebase.doSaveFireball(req.body.favorites);
 })
 
 module.exports = router;
