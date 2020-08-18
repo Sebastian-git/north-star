@@ -74,6 +74,14 @@ li {
     margin: 0px 56px 0px 35px;
     align-content: center;
 }
+
+#signup-title {
+    color: #f0d9ab;
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0 0 0;
+}
+
 #search-title {
     color: #f0d9ab;
     text-align: center;
@@ -86,6 +94,13 @@ li {
     font-size: 28px;
     margin: 30px 0px 0px 0px;
 }
+
+.signup-contents {
+    color: white;
+    margin: 80px 40px 10px 40px;
+
+}
+
 .about-contents {
     color: white;
     margin: 80px 40px 10px 40px;
@@ -133,10 +148,52 @@ input[type=date] {
     text-align: left;
     font-family: 'Open Sans', sans-serif;
 }
+
+
+.auth-input {
+    color: white;
+    font-size: 18px;
+    padding: 5px 20px;
+    width: 180px;
+    background-color: #f0d9ab;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+   margin: 12px 0px 12px 0px;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: white;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer */
+    color: white;
+  }
+  
+  ::placeholder {
+    color: white; 
+}
+
+.button {
+    background-color: #e3a220;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    border-radius: 20px;
+  }
+
 .button1 {
     background-color: #f0d9ab; 
     color: black; 
   }
+
 .button1:hover {
     background-color: #f46050;
     color: white;
