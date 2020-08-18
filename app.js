@@ -1,5 +1,6 @@
 // Import and initialize all required libraries
 const express = require("express");
+const session = require("express-session");
 const { Router } = require("express");
 const app = express();
 require("dotenv").config();
@@ -11,6 +12,20 @@ const database = require("./config/firebase.js");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({extended: true}));
+
+// Use express session
+app.use(
+    session({
+        secret: 'this is a random string secret',
+        resave: false,
+        saveUninitialized: false,
+    }),
+);
+
+app.use((req, res, next) => {
+    res.locals.user = req.session.user;
+    next();
+});  
 
 // Redirect to home page
 app.get("/", function(req, res) {
@@ -32,6 +47,8 @@ app.get("/login", (req, res) => {
 });
 
 app.use("/", searchRouter);
+
+app.use("/", userRouter)
 
 // Start express/nodemon server
 app.listen(process.env.PORT || 5000);

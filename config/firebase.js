@@ -34,9 +34,18 @@ class Firebase {
         return this.db.collection('users').doc(id).get()
     }
 
+    // Firebase API to sign in
+    doSignInWithEmailAndPassword = (email, password) => {
+        return this.auth.signInWithEmailAndPassword(email, password)
+    }
+
     doSaveFireball = id => {
-        return this.db.collection('fireballs').doc("Bill")
-        .set({name : id});
+        return this.db
+        .collection('fireballs').doc("username2")
+        .set(
+            {fireball: app.firestore.FieldValue.arrayUnion(id)},
+            {merge: true}
+        );
     }
 }
 
