@@ -33,6 +33,11 @@ class Firebase {
     doGetUser = id => {
         return this.db.collection('users').doc(id).get()
     }
+
+    doSaveFireball = id => {
+        return this.db.collection('fireballs').doc("Bill")
+        .set({name : id});
+    }
 }
 
 const firebase = new Firebase()
