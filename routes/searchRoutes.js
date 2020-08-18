@@ -36,7 +36,6 @@ router.get("/favorites", (req, res) => {
 })
 
 router.post("/favorite", (req, res) => {
-  console.log(req.body);
   firebase.doSaveFireball(req.body.favorites);
 })
 
