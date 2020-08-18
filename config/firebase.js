@@ -56,7 +56,7 @@ class Firebase {
                 {fireball: app.firestore.FieldValue.arrayUnion(id)},
                 {merge: true}
             );
-        } else return false;
+        }
     }
 }
 
