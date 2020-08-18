@@ -244,3 +244,11 @@ input[type=date] {
 .button-star:active {
     color: yellow;
 }
+
+/* Mobile */
+
+@media only screen and (max-width: 500px) {
+    body {
+      background-color: lightblue;
+    }
+  }
