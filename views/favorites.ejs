@@ -10,15 +10,28 @@
     </head>
 
     <body> 
+
+        <div class="fav-contents">
         <p></p>
-        <a href="/">
-            <center><img src="imgs/banner.svg" width="400px">
-        </a>
+        <ul>
+            <li class="logo">
+                <a href="/">
+                    <img src="imgs/banner.svg" width="300px">
+                </a>
+            </li>
+            <li class="nav-links" style="display: block;">
+                <a id="fav-link" href="favorites"> <i class="fa fa-star-o" aria-hidden="true"></i></a>
+                <a id="about-link" href="about">About</a>
+                <a id="signin-link" href="login">Log in</a>
+                <a id="signup-link" href="signup">Sign up</a>
+            </li>
+        
+        </ul>
 
         <h1 id="search-title">Favorites</h1>
 
         </center>
-
+    </div>
         <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
             <source src="../imgs/meteor2.mp4" type="video/mp4">
           </video>
