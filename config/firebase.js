@@ -24,7 +24,7 @@ class Firebase {
             if (user) {
                 userEmail = user.email
             } else {
-              console.log("null");
+              console.log("null email");
             }
         });
     }
