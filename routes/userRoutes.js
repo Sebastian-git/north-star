@@ -39,18 +39,16 @@ router.post("/login", (req, res) => {
   firebase
     .doSignInWithEmailAndPassword(email, password)
     .then((authUser) => {
-      console.log("called");
       req.session.user = {
         uid: authUser.user.uid,
         email: email,
       };
-
-      res.redirect(`/users/${authUser.user.uid}`);
+      res.redirect(`/`);
     })
     .catch((err) => {
       console.log("hit")
-     // req.app.locals.err = err.message;
-     // res.redirect('/login');
+      req.app.locals.err = err.message;
+      res.redirect('/login');
     });
 });
 
