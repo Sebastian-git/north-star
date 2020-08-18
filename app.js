@@ -11,10 +11,11 @@ const userRouter = require("./routes/userRoutes");
 // Set ejs as default view engine and set /public as the default directory
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-app.use("/user", userRouter);
+app.use("/user", urlencodedParser, userRouter);
 
 // Redirect to home page
 app.get("/", function(req, res) {
+  console.log(req.app.locals.err, "This is from home");
   res.render("index", {currentData: [], fieldData: []});
 });
 
@@ -54,7 +55,6 @@ app.get("/about", (req, res) => {
 app.get("/signup", (req, res) => {
   res.render("signup");
 });
-
 
 // Start express/nodemon server
 app.listen(5000);
