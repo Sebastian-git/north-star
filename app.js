@@ -32,7 +32,7 @@ app.use("/register", userRouter);
 // Redirect to home page
 app.get("/", function(req, res) {
     res.render("index", {currentData: [], fieldData: []});
-  });
+});
   
 // Redirect to about page
 app.get("/about", (req, res) => {
@@ -44,8 +44,14 @@ app.get("/signup", (req, res) => {
     res.render("signup");
 });
 
+// Redirect to login
 app.get("/login", (req, res) => {
     res.render("login");
+});
+
+// Redirect to search
+app.get("/searchResults", function(req, res) {
+    res.render("index", {currentData: [], fieldData: []});
 });
 
 app.use("/", searchRouter);

@@ -49,12 +49,14 @@ class Firebase {
     }
 
     doSaveFireball = id => {
-        return this.db
-        .collection('fireballs').doc(userEmail)
-        .set(
-            {fireball: app.firestore.FieldValue.arrayUnion(id)},
-            {merge: true}
-        );
+        if (userEmail) {
+            return this.db
+            .collection('fireballs').doc(userEmail)
+            .set(
+                {fireball: app.firestore.FieldValue.arrayUnion(id)},
+                {merge: true}
+            );
+        } else return false;
     }
 }
 
