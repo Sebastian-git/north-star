@@ -3,11 +3,6 @@ const express = require('express');
 const router = express.Router();
 const firebase = require('../config/firebase');
 
-// Get home page
-router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Movie App', error: req.app.locals.err });
-});
-
 // Post signup account info
 router.post('/signup', (req, res) => {
   firebase.doCreateUserWithEmailAndPassword(req.body.email, req.body.password)
@@ -46,7 +41,6 @@ router.post("/login", (req, res) => {
       res.redirect(`/`);
     })
     .catch((err) => {
-      console.log("hit")
       req.app.locals.err = err.message;
       res.redirect('/login');
     });
