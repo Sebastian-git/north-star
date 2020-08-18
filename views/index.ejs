@@ -10,8 +10,6 @@
 
     <body> 
 
-        <%- include("signup/index") %>
-
         <%- include("partials/header") %>
 
         <div class="definition">
@@ -34,6 +32,15 @@
                 <input class="submit" type="submit" value="Submit">
             </form>
 
+            <!-- On button click, save information to database -->
+            <script>
+                function saveFavorite(i) {
+                    console.log("CALLED");
+                    var ref = database.ref("favorites");
+                    ref.push(currentData[i]);
+                }
+            </script>
+
             <div class="search-results-box">
                 <h1 id="result-count"> <%=currentData.length %> Results </h1>
                 <ul class="search-results">
@@ -46,9 +53,16 @@
                         <li class="search-result-line">
                         <% for (let j = 0; j < 6; j++) { %>
                             <% if (j === 5) { %> 
-                                <button id="favorites" class="button-star">
+                                <button id="favorites" class="button-star" onclick="saveFavorite()">
                                   <i class="fa fa-star-o" aria-hidden="true"></i>
                                 </button>
+
+                                <script>
+                                    function saveFavorite() {
+                                        console.log("CALLED");
+                                    }
+                                </script>
+
                             <% } %>
                             <% if (j !== 5) { %>
                                 <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>

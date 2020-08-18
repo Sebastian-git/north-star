@@ -15,7 +15,6 @@ app.use("/user", urlencodedParser, userRouter);
 
 // Redirect to home page
 app.get("/", function(req, res) {
-  console.log(req.app.locals.err, "This is from home");
   res.render("index", {currentData: [], fieldData: []});
 });
 

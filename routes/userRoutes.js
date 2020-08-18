@@ -12,7 +12,6 @@ router.get('/', (req, res, next) => {
 router.post('/signup', (req, res) => {
   firebase.doCreateUserWithEmailAndPassword(req.body.email, req.body.password)
     .then(authUser => {
-      console.log(authUser.user.uid, "User ID")
       firebase.doCreateUser(authUser.user.uid, {
         email: req.body.email,
         username: req.body.username
@@ -27,8 +26,7 @@ router.post('/signup', (req, res) => {
     })
 })
 
-router.get('/user/signup', async (req, res) => {
-  console.log(req.params.id, "im here")
+router.get('/signup', async (req, res) => {
   const user = await firebase.doGetUser(req.params.id)
   res.render('users/show', {
     user: user.data()
