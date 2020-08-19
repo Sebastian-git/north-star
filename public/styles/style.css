@@ -253,12 +253,12 @@ input[type=date] {
 
 /* Mobile */
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 780px) {
     
     img {
        
         width: 90%;
-        border: 0px solid #ddd;
+        border: 1px solid #ddd;
 
     }
 
@@ -268,6 +268,7 @@ input[type=date] {
     font-weight: 600;
     font-size: 24px;
     display: block;
+    border: 1px solid #ddd;
     
     
 }
