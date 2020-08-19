@@ -25,12 +25,14 @@ app.use(
 app.use((req, res, next) => {
     res.locals.user = req.session.user;
     next();
-});  
+}); 
+
+app.use("/register", userRouter);
 
 // Redirect to home page
 app.get("/", function(req, res) {
     res.render("index", {currentData: [], fieldData: []});
-  });
+});
   
 // Redirect to about page
 app.get("/about", (req, res) => {
@@ -42,13 +44,17 @@ app.get("/signup", (req, res) => {
     res.render("signup");
 });
 
+// Redirect to login
 app.get("/login", (req, res) => {
     res.render("login");
 });
 
-app.use("/", searchRouter);
+// Redirect to search
+app.get("/searchResults", function(req, res) {
+    res.render("index", {currentData: [], fieldData: []});
+});
 
-app.use("/", userRouter)
+app.use("/", searchRouter);
 
 // Start express/nodemon server
 app.listen(process.env.PORT || 5000);

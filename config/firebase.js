@@ -13,11 +13,20 @@ const config = {
     appId: process.env.APP_ID
 } 
 
+var userEmail = "no user";
+
 class Firebase {
     constructor() {
         app.initializeApp(config)
         this.auth = app.auth()
         this.db = app.firestore()
+        this.auth.onAuthStateChanged(function(user) {
+            if (user) {
+                userEmail = user.email
+            } else {
+              console.log("null email");
+            }
+        });
     }
 
     // Firebase's auth API
@@ -40,12 +49,14 @@ class Firebase {
     }
 
     doSaveFireball = id => {
-        return this.db
-        .collection('fireballs').doc("username2")
-        .set(
-            {fireball: app.firestore.FieldValue.arrayUnion(id)},
-            {merge: true}
-        );
+        if (userEmail) {
+            return this.db
+            .collection('fireballs').doc(userEmail)
+            .set(
+                {fireball: app.firestore.FieldValue.arrayUnion(id)},
+                {merge: true}
+            );
+        }
     }
 }
 

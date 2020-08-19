@@ -5,7 +5,7 @@ const firebase = require('../config/firebase');
 const axios = require("axios");
 
 // Handles search results
-router.post("/searchResults", (req, res) => {
+router.post("/", (req, res) => {
   const maxDate = req.body.max;
   const minDate = req.body.min;
   const config = {
@@ -36,8 +36,8 @@ router.get("/favorites", (req, res) => {
 })
 
 router.post("/favorite", (req, res) => {
-  console.log(req.body);
   firebase.doSaveFireball(req.body.favorites);
+  
 })
 
 module.exports = router;
