@@ -28,8 +28,6 @@ app.use((req, res, next) => {
     next();
 }); 
 
-app.use("/register", userRouter);
-
 // Redirect to home page
 app.get("/", function(req, res) {
     res.render("index", {currentData: [], fieldData: []});
@@ -38,11 +36,6 @@ app.get("/", function(req, res) {
 // Redirect to about page
 app.get("/about", (req, res) => {
     res.render("about");
-});
-
-// Redirect to signup page
-app.get("/signup", (req, res) => {
-    res.render("signup");
 });
 
 // Redirect to login
@@ -55,9 +48,11 @@ app.get("/searchResults", function(req, res) {
     res.render("index", {currentData: [], fieldData: []});
 });
 
-app.use("/", searchRouter);
-
 app.use("/favorites", favoritesRouter);
+
+app.use("/register", userRouter);
+
+app.use("/", searchRouter);
 
 // Start express/nodemon server
 app.listen(process.env.PORT || 5000);
