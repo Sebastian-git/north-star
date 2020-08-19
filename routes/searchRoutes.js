@@ -31,9 +31,15 @@ router.post("/", (req, res) => {
   });
 });
 
-
 router.post("/favorite", (req, res) => {
-  firebase.doSaveFireball(req.body.favorites);
+  console.log(req.body.favorites, " Favorites");
+  firebase.doSaveFireball(req.body.favorites)
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error, " fav error");
+  })
 })
 
 module.exports = router;

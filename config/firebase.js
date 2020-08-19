@@ -49,6 +49,8 @@ class Firebase {
     }
 
     doSaveFireball = id => {
+        console.log(userEmail, " is userEmail");
+        console.log(id, " is iD");
         if (userEmail) {
             return this.db
             .collection('fireballs').doc(userEmail)
