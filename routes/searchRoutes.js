@@ -27,7 +27,6 @@ router.post("/", (req, res) => {
   })
   // Otherwise
   .catch(error => {
-    console.log(error);
   });
 });
 

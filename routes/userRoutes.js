@@ -13,7 +13,6 @@ router.post('/signup', (req, res) => {
       }).then(snapShot => {
         res.redirect(`/`)
       }).catch(err => {
-        console.log(err, "ERROR MSG")
       })
     }).catch(err => {
       req.app.locals.err = err.message

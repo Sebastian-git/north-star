@@ -8,11 +8,10 @@ const axios = require("axios");
 router.get("/", (req, res) => {
     firebase.doGetFireball(req.session.user.email)
     .then( collection => {
-        console.log(collection.data());
+        res.render("favorites", {fireballs: collection.data().fireball});
     }).catch((e) => {
-        console.log(e, " IS ERROR");
+        console.log(e, " favorite routes");
     })
-    res.render("favorites");
 });
 
 module.exports = router;
