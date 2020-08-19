@@ -7,17 +7,22 @@ body {
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
+    color: white;
 }
+
 .logo {
     margin: 40px 0px -10px -10px;
 }
-
-
 
 a {
     color: white;
     text-decoration: none !important;
 }
+.body-txt{
+    color: #f46050;
+    text-decoration: none !important;
+}
+
 a:hover {
     color: #f46050;
 }
@@ -47,6 +52,7 @@ li {
 .nav-links {
     margin: -35px 50px -10px -10px;
     font-weight: 400;
+    float:right;
 }
 #fav-link {
     margin: 8px;
@@ -96,6 +102,13 @@ li {
     margin: 80px 40px 10px 40px;
 }
 
+hr {
+    border: 1px solid white;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
 /* Search */
 .search-form {
     margin: 0 0 0px 0;
@@ -140,6 +153,7 @@ input[type=date] {
 }
 
 
+
 .auth-input {
     color: white;
     font-size: 18px;
@@ -153,6 +167,7 @@ input[type=date] {
     font-family: 'Open Sans', sans-serif;
    margin: 12px 0px 12px 0px;
 }
+
 
 ::-webkit-input-placeholder { /* Edge */
     color: white;
@@ -247,8 +262,46 @@ input[type=date] {
 
 /* Mobile */
 
-@media only screen and (max-width: 500px) {
-    body {
-      background-color: lightblue;
+@media only screen and (max-width: 650px) {
+    
+    img {
+       
+        width: 90%;
+        border: 0px solid #ddd;
+
     }
+
+    /* Navigation */
+.nav-links {
+    margin: 50px;
+    font-weight: 600;
+    font-size: 24px;
+    
+    
+}
+
+.definition {
+    visibility: hidden;
+}
+
+ul {
+    
+    margin: auto;
+}
+
+
+
+#fav-link {
+    margin: 8px;
+}
+#about-link {
+    margin: 8px;
+}
+#signup-link {
+    margin: 8px;
+}
+#signin-link {
+    margin: 8px;
+}
+   
   }
