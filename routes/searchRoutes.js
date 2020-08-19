@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
     for (let i = 0; i < response.data.count; i++) {
       currentData.push([response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3], " "]);
     }
-    fieldData = ["Date/Time", "Energy", "Altitude", "Lon", "Lat", "Fav"];
+    fieldData = ["DATE", "ENG", "ALT", "LON", "LAT", "FAV"];
     // Push current data array to front end each loop
     res.render("index", {currentData, fieldData});
   })
