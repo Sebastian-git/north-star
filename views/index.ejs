@@ -5,34 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Close Encounters of the Meteor Kind</title>
         <link href="styles/style.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/94d9f1d0dc.js"></script>
+        <script src="styles/nav.css"></script>
+        <script src="scripts/script.js" defer=true></script>
+
     </head>
 
     <body> 
-        <ul>
-            <li class="logo">
-                <a href="/">
-                    <img src="imgs/banner.svg" width="300px">
-                </a>
-            </li>
-            <li class="nav-links" style="float:right">
-                <a class="active" href="#about">ABOUT</a>
-            </li>
-        </ul>
-
-        <div class="definition">
-            <img src="imgs/fireball_definition.svg" width="600px">
-        </div>
-
-        <div class="search-title">
-            <h1>Search for Fireballs (ANYWHERE IN THE WORLD)</h1>
-        </div>
+        <%- include("partials/nav") %>
+        
+        <center>
+            <div class="definition">
+                <img src="imgs/fireball_definition_sm.svg" width="400px">
+            </div>
+        </center>
 
         <div class="search-contents">
+       
             <form class="search-form" method="POST" action="/">
                 <div class="min-date">
                     <label for="year">Minimum date:</label>
                     <input type="text" name="min" value="2019-06-01" required>
                 </div>
+
                 <div class="max-date">
                     <label for="year">Maximum date:</label>
                     <input type="text" name="max" value="2020-01-01" required>
@@ -45,8 +40,43 @@
                         <% } %>
                     </ul>
                 </div>
+
+                <input class="submit  button" type="submit" value="Submit">
             </form>
+
+            <div class="search-results-box">
+                <h1 id="result-count"> <%=currentData.length %> Results </h1>
+                <ul class="search-results">
+                    <li>
+                        <% for (let i = 0; i < fieldData.length; i++) { %>
+                                <p> <strong> <%=fieldData[i] %> </strong> </p>
+                        <% } %>
+                    </li>
+                    <% for (let i = 0; i < currentData.length; i++) { %>
+                        <li class="search-result-line">
+                        <% for (let j = 0; j < 6; j++) { %>
+                            <% if (j === 5) { %> 
+                                <form method="POST" action="/favorite">
+                                    <input name="favorites" value="<%= currentData[i] %>" type="hidden">
+                                    <button id="favorite" class="button-star">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                            <% } %>
+                            <% if (j !== 5) { %>
+                                <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
+                                    <p> <%=currentData[i][j] %> </p>
+                                <% } %>
+                        <% } %>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
         </div>
+
+        <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
+            <source src="../imgs/meteor2.mp4" type="video/mp4">
+          </video>
 
     </body>
 </html>

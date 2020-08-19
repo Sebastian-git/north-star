@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Close Encounters of the Meteor Kind</title>
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="auth.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/94d9f1d0dc.js"></script>
+    </head>
+
+    <body> 
+
+      <div class="signup-contents">
+        <a href="/">
+            <center><img src="imgs/banner.svg" width="400px">
+        </a>
+
+        <form method="POST" class="signup-form" action='/register/signup'>
+            <div id="auth-title">
+                <label><h1 id="signup-title">Sign up to enjoy <br> more features</h1></label>
+            </div>
+            <div class="auth-inputs">
+                <div>
+                    <input class="auth-input" type="text" name="username" placeholder="username" autocomplete="off" required>
+                </div>
+                <div>
+                    <input class="auth-input" type="email" name="email" placeholder="email" autocomplete="off" required>
+                </div>
+                <div>
+                    <input class="auth-input" type="password" name="password" placeholder="password" autocomplete="off" required>
+                </div>
+               <p></p>
+                <nav>
+                    <button class="submit-button button" type="submit">Submit</button>
+                </nav>
+            </div>
+       <div style="margin-top: 40px;">Do you have an Account? <a href="login"><span class="body-txt">Log in</span> </a></div>
+        
+        
+        </center>
+
+        </div>
+
+
+
+        <!-- Video Background -->
+        <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
+            <source src="../imgs/meteor2.mp4" type="video/mp4">
+          </video>
+
+    </body>
+</html>

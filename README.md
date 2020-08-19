@@ -4,9 +4,9 @@ Created by the team North Star, **Close Encounters of the Meteor Kind** is a web
 
 ### Tools
 
-HTML, CSS, JavaScript,  NASA's Fireball API and (Firebase ?).
+HTML, CSS, JavaScript, Node.JS/Express, NASA's Fireball API and Firebase.
 
-**Demo:** https://path
+**Demo:** http://project-north-star.herokuapp.com/
 
 
 
@@ -32,17 +32,17 @@ Coming soon
 
 ### Meet the Team
 
-**Sebastian Cevallos**
-**Role:** Project Manager
-**Github:** [Sebastian-git](https://github.com/Sebastian-git)
+**Sebastian Cevallos** <br>
+**Role:** Project Manager <br>
+**Contact:** [Github](https://github.com/Sebastian-git), [LinkedIn](https://www.linkedin.com/in/sebastian-cevallos-2917bb16a/)
 
-**Petula Pascall**
-**Role:** Front-End Developer
-**Github:** [seepetulacode](https://github.com/SeePetulaCode)
+**Petula Pascall** <br>
+**Role:** Front-End Developer <br>
+**Contact:** [Github](https://github.com/SeePetulaCode), [LinkedIn](https://www.linkedin.com/in/petulapascall/)
 
-**Brandan Herron**
-**Role:** Back-End Developer
-**Github:** [brandan1989](https://github.com/brandan1989)
+**Brandan Herron** <br>
+**Role:** Back-End Developer <br>
+**Contact:** [Github](https://github.com/brandan1989), [LinkedIn](https://www.linkedin.com/in/brandan-herron/)
 
 
 

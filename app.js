@@ -1,47 +1,63 @@
 // Import and initialize all required libraries
 const express = require("express");
-const axios = require("axios");
-const bodyParser = require("body-parser");
+const session = require("express-session");
+const { Router } = require("express");
 const app = express();
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+require("dotenv").config();
+const userRouter = require("./routes/userRoutes");
+const searchRouter = require("./routes/searchRoutes");
+const favoritesRouter = require("./routes/favoritesRoutes");
+const database = require("./config/firebase.js");
 
 // Set ejs as default view engine and set /public as the default directory
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(express.urlencoded({extended: true}));
+
+// Use express session
+app.use(
+    session({
+        secret: 'this is a random string secret',
+        resave: false,
+        saveUninitialized: false,
+    }),
+);
+
+app.use((req, res, next) => {
+    res.locals.user = req.session.user;
+    next();
+}); 
+
+app.use("/register", userRouter);
 
 // Redirect to home page
 app.get("/", function(req, res) {
-  res.render("index");
-  console.log(req.ip);
+    res.render("index", {currentData: [], fieldData: []});
+});
+  
+// Redirect to about page
+app.get("/about", (req, res) => {
+    res.render("about");
 });
 
-// Handles search results
-app.post("/", urlencodedParser, function(req, res) {
-  console.log(req.body.min + " and " + req.body.max);
-  const maxDate = req.body.max;
-  const minDate = req.body.min;
-  console.log(minDate);
-  const config = {
-    method: "get",
-    url: `https://ssd-api.jpl.nasa.gov/fireball.api?date-min=${minDate}&date-max=${maxDate}`,
-    headers: { }
-  }
-  axios(config)
-  // If request works
-  .then(response => {
-    let currentData = [];
-    // Add date, energy, velocity, longitude and latitude into array as a string
-    for (let i = 0; i < response.data.count; i++) {
-      currentData = [response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3]];
-    }
-    // Push current data array to front end each loop
-    res.render("index", {currentData});
-  })
-  // Otherwise
-  .catch(error => {
-    console.log(error);
-  });
+// Redirect to signup page
+app.get("/signup", (req, res) => {
+    res.render("signup");
 });
+
+// Redirect to login
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
+// Redirect to search
+app.get("/searchResults", function(req, res) {
+    res.render("index", {currentData: [], fieldData: []});
+});
+
+app.use("/", searchRouter);
+
+app.use("/favorites", favoritesRouter);
 
 // Start express/nodemon server
-app.listen(5000);
+app.listen(process.env.PORT || 5000);

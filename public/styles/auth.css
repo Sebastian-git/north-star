@@ -1,0 +1,22 @@
+
+
+
+
+
+
+.error-box {
+    text-align: center;
+    background: #85002852;
+    color: #a10030;
+    font-size: 17px;
+    width: 32%;
+    height: 5vh;
+    margin: 1vh auto;
+    border-radius: 5px;
+    border: 1px solid #a100304d;
+    box-shadow: 1px 1px 30px #0005;
+}
+.error-message {
+    margin: 2% 0 1% 0;
+}
+
