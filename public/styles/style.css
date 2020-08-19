@@ -328,7 +328,7 @@ input[type=date] {
 @media screen and (max-width: 800px) {
 
     .logo {
-        width: 340px;
+        width: 300px;
     }
 
     .topnav {
