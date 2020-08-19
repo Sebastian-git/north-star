@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Close Encounters of the Meteor Kind</title>
-        <link href="styles/style.css" rel="stylesheet">
-        <link href="auth.css" rel="stylesheet">
-        <script src="https://use.fontawesome.com/94d9f1d0dc.js"></script>        
-    </head>
 
-    <body> 
-      <div class="signup-contents">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Close Encounters of the Meteor Kind</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="auth.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/94d9f1d0dc.js"></script>
+</head>
+
+<body>
+    <div class="signup-contents">
         <a href="/">
             <center><img src="imgs/banner.svg" width="400px">
         </a>
 
         <form method="POST" class="signup-form" action='/register/login'>
             <div id="auth-title">
-                <label><h1 id="signup-title">Log In</h1></label>
+                <label>
+                    <h1 id="signup-title">Log In</h1>
+                </label>
             </div>
             <div class="auth-inputs">
                 <div>
-                    <input class="auth-input" type="text" name="username" placeholder="username" autocomplete="off" required value="kanan">
+                    <input class="auth-input" type="text" name="username" placeholder="username" autocomplete="off"
+                        required value="kanan">
                 </div>
                 <div>
-                    <input class="auth-input" type="email" name="email" placeholder="email" autocomplete="off" required value="kanan@gmail.com">
+                    <input class="auth-input" type="email" name="email" placeholder="email" autocomplete="off" required
+                        value="kanan@gmail.com">
                 </div>
                 <div>
-                    <input class="auth-input" type="password" name="password" placeholder="password" autocomplete="off" required value="password">
+                    <input class="auth-input" type="password" name="password" placeholder="password" autocomplete="off"
+                        required value="password">
                 </div>
-               <p></p>
+                <p></p>
                 <nav>
                     <button class="submit-button button" type="submit">Submit</button>
                 </nav>
             </div>
-            <div style="margin-top: 40px;">Don't have an Account? <a href="signup"><span class="body-txt">Sign up</span> </a></div>
-        </center>
+            <div style="margin-top: 40px;">Don't have an Account? <a href="signup"><span class="body-txt">Sign up</span>
+                </a></div>
+            </center>
 
-        </div>
-        <!-- Video Background -->
-        <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
-            <source src="../imgs/meteor2.mp4" type="video/mp4">
-          </video>
+    </div>
 
-    </body>
+
+</body>
+
+<!-- Video Background w. Dark Screen-->
+<div class="dark-screen-back"></div>
+
+<video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
+    <source src="../imgs/meteor2.mp4" type="video/mp4">
+</video>
+
 </html>
