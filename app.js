@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: true}));
 // Use express session
 app.use(
     session({
-        secret: 'this is a random string secret',
+        secret: 'string',
         resave: false,
         saveUninitialized: false,
     }),

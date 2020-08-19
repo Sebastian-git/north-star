@@ -44,16 +44,23 @@
                                 <p> <strong> <%=fieldData[i] %> </strong> </p>
                         <% } %>
                     </li>
+                    <%= console.log(user, " THIS") %>
                     <% for (let i = 0; i < currentData.length; i++) { %>
                         <li class="search-result-line">
                         <% for (let j = 0; j < 6; j++) { %>
                             <% if (j === 5) { %> 
+                                <% if (user) { %> 
                                 <form method="POST" action="/favorite">
                                     <input name="favorites" value="<%= currentData[i] %>" type="hidden">
                                     <button id="favorite" class="button-star">
                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                     </button>
                                 </form>
+                                <% } else { %>
+                                    <button id="favorite" class="button-star" onclick="">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </button>
+                                <% } %>
                             <% } %>
                             <% if (j !== 5) { %>
                                 <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
