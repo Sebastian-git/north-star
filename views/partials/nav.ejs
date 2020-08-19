@@ -2,49 +2,26 @@
     <a href="/">
         <img class="logo" src="imgs/banner.svg">
     </a>
-    
     <a href="login"  class="browser-nav" >Log In</a>
     <a href="signup"  class="browser-nav" >Sign Up</a>
     <a href="about"  class="browser-nav" >About</a>
     <a href="favorites"  class="browser-nav" ><i class="fa fa-star-o" aria-hidden="true"></i></a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars  fa-sm"  fa-sm></i>
     </a>
-
   </div>
 
-  
   <script>
   function myFunction() {
-   
+
     let x = document.getElementById("myTopnav");
     let closedIcon = document.getElementsByClassName("icon");
 
     if (x.className === "topnav") {
       x.className += " responsive";
       document.getElementsByClassName("icon")[0].innerHTML = "<i class=\"fa fa-times\"></i>";
-
     } else {
       x.className = "topnav";
       document.getElementsByClassName("icon")[0].innerHTML = "<i class=\"fa fa-bars  fa-sm\"  fa-sm></i>";
     }
-
-
-    
   }
   </script>
-
-
-<!--- <ul>
-    <li class="logo">
-        <a href="/">
-            <img src="imgs/banner.svg" width="300px">
-        </a>
-    </li>
-    <li class="nav-links">
-        <a id="fav-link" href="favorites"> <i class="fa fa-star-o" aria-hidden="true"></i></a>
-        <a id="about-link" href="about">About</a>
-        <a id="signin-link" href="login">Log in</a>
-        <a id="signup-link" href="signup">Sign up</a>
-    </li>
-
-</ul>  --->

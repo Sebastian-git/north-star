@@ -1,5 +1,6 @@
 // Initialize global variables
-const app = require('firebase/app')
+const app = require('firebase/app');
+const { ifError } = require('assert');
 require('firebase/auth')
 require('firebase/firestore')
 
@@ -24,7 +25,6 @@ class Firebase {
             if (user) {
                 userEmail = user.email
             } else {
-              console.log("null email");
             }
         });
     }
@@ -57,6 +57,10 @@ class Firebase {
                 {merge: true}
             );
         }
+    }
+
+    doGetFireball = email => {
+        return this.db.collection("fireballs").doc(email).get();
     }
 }
 
