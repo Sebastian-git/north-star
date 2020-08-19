@@ -12,6 +12,7 @@ body {
 
 .logo {
     margin: 40px 0px -10px -10px;
+    
 }
 
 a {
@@ -211,16 +212,6 @@ input[type=date] {
   }
 
 
-.button1 {
-    background-color: #f0d9ab; 
-    color: black; 
-  }
-
-.button1:hover {
-    background-color: #f46050;
-    color: white;
-}
-
 /* Search results */
 .search-results {
     list-style-type: none;
@@ -273,9 +264,10 @@ input[type=date] {
 
     /* Navigation */
 .nav-links {
-    margin: 50px;
+    margin: 20px auto auto auto;
     font-weight: 600;
     font-size: 24px;
+    display: block;
     
     
 }
@@ -289,8 +281,6 @@ ul {
     margin: auto;
 }
 
-
-
 #fav-link {
     margin: 8px;
 }
@@ -303,5 +293,39 @@ ul {
 #signin-link {
     margin: 8px;
 }
+
+.button {
+    
+    background-color: #ec8f1b;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    margin: 20px auto auto auto;
+    border-radius: 30px;
+    width: 150px;
+    transition-duration: 0.4s;
+  }
+
+  .button:hover {
+    
+    background-color:  #f46050;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    margin: 20px auto auto auto;
+    border-radius: 30px;
+    width: 150px;
+    transition-duration: 0.4s;
+  }
+
+
    
   }
