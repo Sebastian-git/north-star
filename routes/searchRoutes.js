@@ -11,7 +11,7 @@ router.post("/", (req, res) => {
   const config = {
     method: "get",
     url: `https://ssd-api.jpl.nasa.gov/fireball.api?date-min=${minDate}&date-max=${maxDate}`,
-    headers: { }
+    navs: { }
   }
   axios(config)
   // If request works
@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
     for (let i = 0; i < response.data.count; i++) {
       currentData.push([response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3], " "]);
     }
-    fieldData = ["Date/Time", "Energy", "Altitude", "Longitude", "Latitude", "Favorites"];
+    fieldData = ["Date/Time", "Energy", "Altitude", "Lon", "Lat", "Fav"];
     // Push current data array to front end each loop
     res.render("index", {currentData, fieldData});
   })
@@ -31,13 +31,9 @@ router.post("/", (req, res) => {
   });
 });
 
-router.get("/favorites", (req, res) => {
-  res.render("favorites");
-})
 
 router.post("/favorite", (req, res) => {
   firebase.doSaveFireball(req.body.favorites);
-  
 })
 
 module.exports = router;

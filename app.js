@@ -6,6 +6,7 @@ const app = express();
 require("dotenv").config();
 const userRouter = require("./routes/userRoutes");
 const searchRouter = require("./routes/searchRoutes");
+const favoritesRouter = require("./routes/favoritesRoutes");
 const database = require("./config/firebase.js");
 
 // Set ejs as default view engine and set /public as the default directory
@@ -55,6 +56,8 @@ app.get("/searchResults", function(req, res) {
 });
 
 app.use("/", searchRouter);
+
+app.use("/favorites", favoritesRouter);
 
 // Start express/nodemon server
 app.listen(process.env.PORT || 5000);
