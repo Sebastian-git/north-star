@@ -32,14 +32,7 @@ router.post("/", (req, res) => {
 });
 
 router.post("/favorite", (req, res) => {
-  console.log(req.body.favorites, " Favorites");
-  firebase.doSaveFireball(req.body.favorites)
-  .then(response => {
-    console.log(response);
-  })
-  .catch(error => {
-    console.log(error, " fav error");
-  })
+  firebase.doSaveFireball(req.body.favorites, req.session.user.email);
 })
 
 module.exports = router;
