@@ -204,6 +204,33 @@ input[type=date] {
     padding: 10px;
     text-align: center;
     text-decoration: none;
+    font-size: 18px;
+    margin: 4px 20px;
+    border-radius: 30px;
+    width: 150px;
+}
+
+.button-fav {
+    background-color: #ec8f1b;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 20px;
+    border-radius: 30px;
+    width: 150px;
+    transition-duration: 0.4s;
+}
+
+.button-fav:hover {
+    background-color: #f46050;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
     font-size: 18px;
     margin: 4px 20px;
