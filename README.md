@@ -16,9 +16,9 @@ North Star is the name of [our](#members) group in the Snapchat Engineering Acad
 
 #### Setup
 
-1 - Clone the master repository (```git clone https://github.com/Sebastian-git/north-star.git```)
-2 - Install Node.js [here](https://nodejs.org/en/download/) 
-3 - Open up your cloned repository's directory and type ``` npm install ``` to download all dependencies from the package.json.
+1 - Clone the master repository (```git clone https://github.com/Sebastian-git/north-star.git```) <br>
+2 - Install Node.js [here](https://nodejs.org/en/download/) <br>
+3 - Open up your cloned repository's directory and type ``` npm install ``` to download all dependencies from the package.json. <br>
 
 (Fun fact, type ```npm list``` to see all installed dependencies!)
 
@@ -26,7 +26,7 @@ Now, you should be set to start using our Snap Observatory!
 
 ##### Previews
 
-(1) The feature with the most potential for the future is "favorites" which displays favorite fireball entries with a map containing longitude and latitude to give users a more visual experience. 
+(1) The feature with the most potential for the future is "favorites" which displays favorite fireball entries with a map containing longitude and latitude to give users a more visual experience. <br>
 (2 & 3) The search functionality pulls from all recorded NASA Fireball events and displays them in a neat format.
 
 <img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/map%20preview%20phone.jpg"> |
