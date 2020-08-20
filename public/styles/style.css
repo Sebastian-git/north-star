@@ -38,21 +38,21 @@ a {
 }
 
 .body-txt {
-    color: #f46050;
+    color: #f8b972;
     text-decoration: none !important;
 }
 
 a:hover {
-    color: #f46050;
+    color: #f8b972;
 }
 
 p a {
-    color: #f46050;
+    color: #f8b972;
     text-decoration: none !important;
 }
 
 p a:hover {
-    color: #f46050;
+    color: #f8b972;
 }
 
 li {
@@ -337,7 +337,7 @@ input[type=date] {
 
 .topnav a:hover {
 
-    color: #f46050;
+    color: #f8b972;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -402,7 +402,7 @@ input[type=date] {
 
     .topnav a:hover {
 
-        color: #f46050;
+        color: #f8b972;
         font-size: 30px;
     }
 
