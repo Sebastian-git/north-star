@@ -1,5 +1,6 @@
 // Initialize global variables
-const app = require('firebase/app')
+const app = require('firebase/app');
+const { ifError } = require('assert');
 require('firebase/auth')
 require('firebase/firestore')
 
@@ -32,6 +33,32 @@ class Firebase {
 
     doGetUser = id => {
         return this.db.collection('users').doc(id).get()
+    }
+
+    // Firebase API to sign in
+    doSignInWithEmailAndPassword = (email, password) => {
+        return this.auth.signInWithEmailAndPassword(email, password)
+    }
+
+    doSaveFireball = (fireball, email) => {
+        if (email) {
+            return this.db
+            .collection('fireballs').doc(email)
+            .set(
+                {fireball: app.firestore.FieldValue.arrayUnion(fireball)},
+                {merge: true}
+            );
+        }
+    }
+
+    doGetFireball = email => {
+        return this.db.collection("fireballs").doc(email).get();
+    }
+    
+    signOff = () => {
+        this.auth.signOut().then(function() {
+          }).catch(function(error) {
+          });
     }
 }
 

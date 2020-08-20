@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Close Encounters of the Meteor Kind</title>
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="auth.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/94d9f1d0dc.js"></script>
+    </head>
+
+    <body> 
+            <%- include("partials/nav") %>
+            <div class="about-contents">
+                <h1  class="about-title">Favorites</h1>
+
+                <% for (let i = 0; i < fireballs.length; i++) { %>
+                    <p> <%= fireballs[i] %> </p>
+                    <!-- Insert delete here (i think) -->
+                <% } %>
+
+          <div style="background-color: teal; width: 200px; height: 300px; margin: 20px; display: block"></div>
+
+            <form>
+                <input class="submit  button-fav" type="submit" value="Edit"> 
+                <input class="submit    button-fav" type="submit" value="Delete">
+            </form>
+
+            </div>
+        <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
+            <source src="../imgs/meteor2.mp4" type="video/mp4">
+        </video>
+    </body>
+</html>

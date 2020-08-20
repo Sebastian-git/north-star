@@ -4,9 +4,9 @@ Created by the team North Star, **Close Encounters of the Meteor Kind** is a web
 
 ### Tools
 
-HTML, CSS, JavaScript,  NASA's Fireball API and (Firebase ?).
+HTML, CSS, JavaScript, Node.JS/Express, NASA's Fireball API and Firebase.
 
-**Demo:** https://path
+**Demo:** http://project-north-star.herokuapp.com/
 
 
 

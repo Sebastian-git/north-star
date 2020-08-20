@@ -5,35 +5,34 @@ const firebase = require('../config/firebase');
 const axios = require("axios");
 
 // Handles search results
-router.post("/searchResults", (req, res) => {
+router.post("/", (req, res) => {
   const maxDate = req.body.max;
   const minDate = req.body.min;
   const config = {
     method: "get",
     url: `https://ssd-api.jpl.nasa.gov/fireball.api?date-min=${minDate}&date-max=${maxDate}`,
-    headers: { }
+    navs: { }
   }
   axios(config)
   // If request works
   .then(response => {
     // Add date, energy, velocity, longitude and latitude into array as a string
-    let currentData = [];
+    let currentData = []; 
     for (let i = 0; i < response.data.count; i++) {
       currentData.push([response.data.data[i][0], response.data.data[i][1], response.data.data[i][8], response.data.data[i][5], response.data.data[i][3], " "]);
     }
-    fieldData = ["Date/Time", "Energy", "Altitude", "Longitude", "Latitude", "Favorites"];
+    fieldData = ["DATE", "ENG", "ALT", "LON", "LAT", "FAV"];
     // Push current data array to front end each loop
     res.render("index", {currentData, fieldData});
   })
-  // Otherwise
   .catch(error => {
-    console.log(error);
   });
 });
 
+// Save fireball to email
 router.post("/favorite", (req, res) => {
-  var ref = database.ref("favorites");
-  ref.push(currentData[i]);
+  firebase.doSaveFireball(req.body.favorites, req.session.user.email);
 })
 
+// Allows imports
 module.exports = router;

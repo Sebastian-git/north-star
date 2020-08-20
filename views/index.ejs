@@ -6,21 +6,20 @@
         <title>Close Encounters of the Meteor Kind</title>
         <link href="styles/style.css" rel="stylesheet">
         <script src="https://use.fontawesome.com/94d9f1d0dc.js"></script>
+        <script src="styles/nav.css"></script>
         <script src="scripts/script.js" defer=true></script>
-        
     </head>
 
     <body> 
-
-        <%- include("partials/header") %>
-
-        <div class="definition">
-            <img src="imgs/fireball_definition.svg" width="700px">
-        </div>
+        <%- include("partials/nav") %>
+        <center>
+                <img class="definition" src="imgs/fireball_definition_sm.svg">
+        </center>
 
         <div class="search-contents">
-            <h1 id="search-title">Search for Fireballs (ANYWHERE IN THE WORLD)</h1>
-            <form class="search-form" method="POST" action="/searchResults">
+       
+            <!-- Search calendar -->
+            <form class="search-form" method="POST" action="/">
                 <div class="min-date">
                     <label for="year">Start Date:</label>
                     <input type="date" name="min" value="2020-01-01" required>
@@ -31,9 +30,10 @@
                     <input type="date" name="max" value="2020-08-12" required>
                 </div>
 
-                <input class="submit" type="submit" value="Submit">
+                <input class="submit  button" type="submit" value="Find Fireballs">
             </form>
 
+            <!-- Search results -->
             <div class="search-results-box">
                 <h1 id="result-count"> <%=currentData.length %> Results </h1>
                 <ul class="search-results">
@@ -46,11 +46,18 @@
                         <li class="search-result-line">
                         <% for (let j = 0; j < 6; j++) { %>
                             <% if (j === 5) { %> 
+                                <% if (user) { %> 
                                 <form method="POST" action="/favorite">
-                                    <button id="favorites" class="button-star">
+                                    <input name="favorites" value="<%= currentData[i] %>" type="hidden">
+                                    <button id="favorite" class="button-star">
                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                     </button>
                                 </form>
+                                <% } else { %>
+                                    <button id="favorite" class="button-star" onclick="alert('sign in')">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </button>
+                                <% } %>
                             <% } %>
                             <% if (j !== 5) { %>
                                 <% if (!currentData[i][j]) currentData[i][j] = "N/A"; %>
@@ -62,10 +69,12 @@
                 </ul>
             </div>
         </div>
-
-        <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
-            <source src="../imgs/meteor2.mp4" type="video/mp4">
-          </video>
-
     </body>
+
+    <!-- Video Background w. Dark Screen-->
+    <div class="dark-screen-back"></div>
+
+    <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
+        <source src="../imgs/meteor2.mp4" type="video/mp4">
+      </video>
 </html>
