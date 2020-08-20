@@ -452,5 +452,12 @@ input[type=date] {
         border-radius: 30px;
         width: 200px;
     }
+}
 
+/* Favorites */
+.fireballs {
+    margin: 10px 0px;
+}
+.fireball {
+    margin: 1px 1px 1px 1px
 }
