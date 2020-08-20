@@ -20,7 +20,7 @@
     "node": "^14.7.0",
     "nodemon": "^2.0.4"
   },
-  "description": "Created by the team North Star, **Close Encounters of the Meteor Kind** is a website that uses NASA's Fireball API to inform the user of the date, location and magnitude of fireballs with a search functionality.",
+  "description": "Created by the team North Star, **Snap Observatory** is a website that uses NASA's Fireball API to inform the user of the date, location and magnitude of fireballs with a search functionality.",
   "main": "app.js",
   "repository": {
     "type": "git",
