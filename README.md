@@ -96,7 +96,7 @@ This function takes a fireball and email as parameters, checks if the email exis
 ### Launch
 HTML 5, CSS 3, Javascript 3 <br>
 Node.js 12.18.3, Nodemon 2.0.4, Node 14.8.0, Express 4.17.1, Express-Session 1.17.1, Axios 0.19.2, Body-Parser 1.19.0 <br>
-Firebase 7.18.0, VS Code 1.48 <br>
+Firebase 7.18.0, VS Code 1.48, Heroku <br>
 
 ### Status: 
 
