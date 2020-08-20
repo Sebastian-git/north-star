@@ -24,13 +24,10 @@ Now, you should be set to start using our Snap Observatory!
 
 ##### Previews
 
-The feature with the most potential for the future is "favorites" which displays favorite fireball entries with a map containing longitude and latitude to give users a more visual experience. 
+(1) The feature with the most potential for the future is "favorites" which displays favorite fireball entries with a map containing longitude and latitude to give users a more visual experience. 
+(2 & 3) The search functionality pulls from all recorded NASA Fireball events and displays them in a neat format.
 
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
-<img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/map%20preview%20phone.jpg">
-
-The search functionality pulls from all recorded NASA Fireball events and displays them in a neat format.
-
+<img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/map%20preview%20phone.jpg"> |
 <img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/results.png"> |
 <img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/search.png"> 
 
