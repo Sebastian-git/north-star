@@ -37,7 +37,7 @@ Now, you should be set to start using our Snap Observatory!
 ##### Technical Information 
 
 The single most important piece of code in this program is the implementation of the NASA API inside ```/routes/searchRoutes.js``` on lines 8-30.
-```
+``` js
 router.post("/", (req, res) => {
   const maxDate = req.body.max;
   const minDate = req.body.min;
@@ -65,13 +65,13 @@ router.post("/", (req, res) => {
 This code takes the minimum and maximum constraints given by the front end, then connect the API inside the config object. The program then creates a two dimensional array. There is one array that contains multiple other arrays with entries of data that is then sent to the front end.
 
 Another important group of code lies inside ```config/firebase.js```, which contains multiple functions that take advantage of Firebase's [firestore](https://firebase.google.com/docs/firestore) and [authentication](https://firebase.google.com/docs/auth) API's.
-``` 
+``` js
 doCreateUserWithEmailAndPassword = (email, password) => {
   return this.auth.createUserWithEmailAndPassword(email, password)
 }
 ```
 These two critical lines of code create a new account using an email and a password through the authentication API.
-```
+``` js
 doSaveFireball = (fireball, email) => {
   if (email) {
     return this.db
