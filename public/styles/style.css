@@ -38,21 +38,21 @@ a {
 }
 
 .body-txt {
-    color: #f46050;
+    color: #f8b972;
     text-decoration: none !important;
 }
 
 a:hover {
-    color: #f46050;
+    color: #f8b972;
 }
 
 p a {
-    color: #f46050;
+    color: #f8b972;
     text-decoration: none !important;
 }
 
 p a:hover {
-    color: #f46050;
+    color: #f8b972;
 }
 
 li {
@@ -337,7 +337,7 @@ input[type=date] {
 
 .topnav a:hover {
 
-    color: #f46050;
+    color: #f8b972;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -357,6 +357,15 @@ input[type=date] {
 }
 
 @media screen and (max-width: 800px) {
+
+    /* Favorites */
+    .favorite-line {
+
+    }
+    
+    .favorite-data {
+        
+    }
 
     .logo {
         width: 280px;
@@ -393,7 +402,7 @@ input[type=date] {
 
     .topnav a:hover {
 
-        color: #f46050;
+        color: #f8b972;
         font-size: 30px;
     }
 
@@ -452,5 +461,25 @@ input[type=date] {
         border-radius: 30px;
         width: 200px;
     }
+}
 
+/* Favorites */
+.favorite-table {
+    list-style-type: none;
+    background-color: #ffffff93;
+    padding: 10px 0;
+    width: 100%;
+}
+.favorite-line {
+    width: 100%;
+    padding: 10px 0px;
+    list-style-type: none;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    text-align: center;
+}
+.favorite-data {
+    
 }

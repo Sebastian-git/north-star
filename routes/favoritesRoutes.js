@@ -8,7 +8,11 @@ const axios = require("axios");
 router.get("/", (req, res) => {
     firebase.doGetFireball(req.session.user.email)
     .then( collection => {
-        res.render("favorites", {fireballs: collection.data().fireball});
+        let fireballsArray = [["DATE", "ENG", "ALT", "LON", "LAT"]];
+        collection.data().fireball.forEach((item) => {
+            fireballsArray.push(item.split(","));
+        })
+        res.render("favorites", {fireballs: fireballsArray});
     }).catch((e) => {
         console.log(e, " favorite routes");
     })
