@@ -14,4 +14,5 @@ router.get("/", (req, res) => {
     })
 });
 
+// Allows imports
 module.exports = router;

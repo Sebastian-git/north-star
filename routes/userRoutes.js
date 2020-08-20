@@ -20,6 +20,7 @@ router.post('/signup', (req, res) => {
     })
 })
 
+// Handle sign up get request
 router.get('/signup', async (req, res) => {
   const user = await firebase.doGetUser(req.params.id)
   res.render('users/show', {
@@ -27,6 +28,7 @@ router.get('/signup', async (req, res) => {
   })
 })
 
+// Handle login post request
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
   req.app.locals.err = '';
@@ -45,11 +47,11 @@ router.post("/login", (req, res) => {
     });
 });
 
+// Handle logout post request
 router.post("/logout", (req, res) => {
-  console.log("CALLED LOGOUT");
   firebase.signOff();
-  console.log("redirecting on userRoutes");
   res.redirect("/");
 });
 
+// Allows imports
 module.exports = router;
