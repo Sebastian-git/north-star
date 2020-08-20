@@ -15,15 +15,17 @@
             <div class="about-contents">
                 <h1  class="about-title">Favorites</h1>
 
-                <% for (let i = 0; i < fireballs.length; i++) { %>
-                    <div class="fireballs">
-                        <p class="fireball"> <%= fireballs[i] %> </p>
-                    </div>
-                    <input class="submit button-fav" type="submit" value="Delete">
-
-                <% } %>
+            <ul class="favorite-table">
+                <% fireballs.forEach(fireballData => { %>
+                    <li class="favorite-line">
+                        <% fireballData.forEach(data => { %>
+                            <span class="favorite-data"> <%= data %> </span>
+                        <% }) %>
+                    </li>
+                <% }) %>
+            </ul>
+                
             </div>
-
         <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
             <source src="../imgs/meteor2.mp4" type="video/mp4">
         </video>
