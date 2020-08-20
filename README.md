@@ -16,9 +16,9 @@ North Star is the name of [our](#members) group in the Snapchat Engineering Acad
 
 #### Setup
 
-1 - Clone the master repository (```git clone https://github.com/Sebastian-git/north-star.git```)
-2 - Install Node.js [here](https://nodejs.org/en/download/) 
-3 - Open up your cloned repository's directory and type ``` npm install ``` to download all dependencies from the package.json.
+1 - Clone the master repository (```git clone https://github.com/Sebastian-git/north-star.git```) <br>
+2 - Install Node.js [here](https://nodejs.org/en/download/) <br>
+3 - Open up your cloned repository's directory and type ``` npm install ``` to download all dependencies from the package.json. <br>
 
 (Fun fact, type ```npm list``` to see all installed dependencies!)
 
@@ -26,7 +26,7 @@ Now, you should be set to start using our Snap Observatory!
 
 ##### Previews
 
-(1) The feature with the most potential for the future is "favorites" which displays favorite fireball entries with a map containing longitude and latitude to give users a more visual experience. 
+(1) The feature with the most potential for the future is "favorites" which displays favorite fireball entries with a map containing longitude and latitude to give users a more visual experience. <br>
 (2 & 3) The search functionality pulls from all recorded NASA Fireball events and displays them in a neat format.
 
 <img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/map%20preview%20phone.jpg"> |
@@ -37,7 +37,7 @@ Now, you should be set to start using our Snap Observatory!
 ##### Technical Information 
 
 The single most important piece of code in this program is the implementation of the NASA API inside ```/routes/searchRoutes.js``` on lines 8-30.
-```
+``` js
 router.post("/", (req, res) => {
   const maxDate = req.body.max;
   const minDate = req.body.min;
@@ -65,13 +65,13 @@ router.post("/", (req, res) => {
 This code takes the minimum and maximum constraints given by the front end, then connect the API inside the config object. The program then creates a two dimensional array. There is one array that contains multiple other arrays with entries of data that is then sent to the front end.
 
 Another important group of code lies inside ```config/firebase.js```, which contains multiple functions that take advantage of Firebase's [firestore](https://firebase.google.com/docs/firestore) and [authentication](https://firebase.google.com/docs/auth) API's.
-``` 
+``` js
 doCreateUserWithEmailAndPassword = (email, password) => {
   return this.auth.createUserWithEmailAndPassword(email, password)
 }
 ```
 These two critical lines of code create a new account using an email and a password through the authentication API.
-```
+``` js
 doSaveFireball = (fireball, email) => {
   if (email) {
     return this.db
@@ -87,18 +87,10 @@ This function takes a fireball and email as parameters, checks if the email exis
 
 ### <a name="members"></a> Meet the Team
 
-**Sebastian Cevallos** <br>
-**Role:** Project Manager <br>
-**Contact:** [Github](https://github.com/Sebastian-git), [LinkedIn](https://www.linkedin.com/in/sebastian-cevallos-2917bb16a/)
-
-**Petula Pascall** <br>
-**Role:** Front-End Developer <br>
-**Contact:** [Github](https://github.com/SeePetulaCode), [LinkedIn](https://www.linkedin.com/in/petulapascall/)
-
-**Brandan Herron** <br>
-**Role:** Back-End Developer <br>
-**Contact:** [Github](https://github.com/brandan1989), [LinkedIn](https://www.linkedin.com/in/brandan-herron/)
-
+**Titles** | **Sebastian Cevallos** | **Petula Pascall** | **Brandan Herron** |
+|-|-|-|-|
+|**Role**| Project Manager/Back-end Developer | Front-end Developer | Back-end Developer |
+|**Contact**| [Github](https://github.com/Sebastian-git), [LinkedIn](https://www.linkedin.com/in/sebastian-cevallos-2917bb16a/) | [Github](https://github.com/SeePetulaCode), [LinkedIn](https://www.linkedin.com/in/petulapascall/) | [Github](https://github.com/brandan1989), [LinkedIn](https://www.linkedin.com/in/brandan-herron/) |
 
 
 ### Launch
@@ -108,6 +100,6 @@ Firebase 7.18.0, VS Code 1.48 <br>
 
 ### Status: 
 
-In progress
+Complete (unless nominated as a Snap Mini)
 
 #### [back to the top](#title)
