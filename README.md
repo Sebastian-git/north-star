@@ -20,6 +20,8 @@ North Star is the name of [our](#members) group in the Snapchat Engineering Acad
 2 - Install Node.js [here](https://nodejs.org/en/download/) 
 3 - Open up your cloned repository's directory and type ``` npm install ``` to download all dependencies from the package.json.
 
+(Fun fact, type ```npm list``` to see all installed dependencies!)
+
 Now, you should be set to start using our Snap Observatory!
 
 ##### Previews
@@ -28,8 +30,8 @@ Now, you should be set to start using our Snap Observatory!
 (2 & 3) The search functionality pulls from all recorded NASA Fireball events and displays them in a neat format.
 
 <img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/map%20preview%20phone.jpg"> |
-<img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/results.png"> |
-<img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/search.png"> 
+<img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/search.png"> |
+<img width="200" height="400" alt="portfolio_view" src="https://github.com/Sebastian-git/north-star/blob/master/readmeImages/results.png">
 
 
 ##### Technical Information 
@@ -83,23 +85,6 @@ doSaveFireball = (fireball, email) => {
 ```
 This function takes a fireball and email as parameters, checks if the email exists and then saves the entries to view in the favorites page.
 
-### Launch
-
-Python 3.6.3
-
-### Status: 
-
-In progress
-
-#### [back to the top](#flashcards)
-
-
-### User Actions
-
--  Search functionality that allows you to input a date (month, year, day) that will display relevant information on fireballs & bolides
--  Information presented by the search functionality includes the location and impact energy
-
-
 ### <a name="members"></a> Meet the Team
 
 **Sebastian Cevallos** <br>
@@ -116,6 +101,13 @@ In progress
 
 
 
-### Credits
+### Launch
+HTML 5, CSS 3, Javascript 3
+Node.js 12.18.3, Nodemon 2.0.4, Node 14.8.0, Express 4.17.1, Express-Session 1.17.1, Axios 0.19.2, Body-Parser 1.19.0
+Firebase 7.18.0, VS Code 1.48
 
-- NASA JPL Fireball API
+### Status: 
+
+In progress
+
+#### [back to the top](#Snap Observatory)
