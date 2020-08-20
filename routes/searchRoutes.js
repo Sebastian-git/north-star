@@ -25,13 +25,14 @@ router.post("/", (req, res) => {
     // Push current data array to front end each loop
     res.render("index", {currentData, fieldData});
   })
-  // Otherwise
   .catch(error => {
   });
 });
 
+// Save fireball to email
 router.post("/favorite", (req, res) => {
   firebase.doSaveFireball(req.body.favorites, req.session.user.email);
 })
 
+// Allows imports
 module.exports = router;

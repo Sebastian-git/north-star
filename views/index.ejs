@@ -8,20 +8,17 @@
         <script src="https://use.fontawesome.com/94d9f1d0dc.js"></script>
         <script src="styles/nav.css"></script>
         <script src="scripts/script.js" defer=true></script>
-
     </head>
 
     <body> 
         <%- include("partials/nav") %>
-        
         <center>
-      
                 <img class="definition" src="imgs/fireball_definition_sm.svg">
-       
         </center>
 
         <div class="search-contents">
        
+            <!-- Search calendar -->
             <form class="search-form" method="POST" action="/">
                 <div class="min-date">
                     <label for="year">Start Date:</label>
@@ -36,6 +33,7 @@
                 <input class="submit  button" type="submit" value="Find Fireballs">
             </form>
 
+            <!-- Search results -->
             <div class="search-results-box">
                 <h1 id="result-count"> <%=currentData.length %> Results </h1>
                 <ul class="search-results">
@@ -71,11 +69,7 @@
                 </ul>
             </div>
         </div>
-
-  
-
     </body>
-
 
     <!-- Video Background w. Dark Screen-->
     <div class="dark-screen-back"></div>
@@ -83,6 +77,4 @@
     <video autoplay loop id="video-background" poster="../imgs/back1.jpg" muted>
         <source src="../imgs/meteor2.mp4" type="video/mp4">
       </video>
-
-      
 </html>

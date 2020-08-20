@@ -358,6 +358,15 @@ input[type=date] {
 
 @media screen and (max-width: 800px) {
 
+    /* Favorites */
+    .favorite-line {
+
+    }
+    
+    .favorite-data {
+        
+    }
+
     .logo {
         width: 280px;
         margin: 0 0 0 -15px;
@@ -452,5 +461,25 @@ input[type=date] {
         border-radius: 30px;
         width: 200px;
     }
+}
 
+/* Favorites */
+.favorite-table {
+    list-style-type: none;
+    background-color: #ffffff93;
+    padding: 10px 0;
+    width: 100%;
+}
+.favorite-line {
+    width: 100%;
+    padding: 10px 0px;
+    list-style-type: none;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    text-align: center;
+}
+.favorite-data {
+    
 }

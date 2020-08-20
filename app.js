@@ -14,7 +14,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({extended: true}));
 
-// Use express session
+// Use express session cookies
 app.use(
     session({
         secret: 'string',
@@ -43,10 +43,16 @@ app.get("/login", (req, res) => {
     res.render("login");
 });
 
+app.get("/signup", (req, res) => {
+    res.render("signup");
+});
+
 // Redirect to search
 app.get("/searchResults", function(req, res) {
     res.render("index", {currentData: [], fieldData: []});
 });
+
+// Connect routers
 
 app.use("/favorites", favoritesRouter);
 
