@@ -87,18 +87,10 @@ This function takes a fireball and email as parameters, checks if the email exis
 
 ### <a name="members"></a> Meet the Team
 
-**Sebastian Cevallos** <br>
-**Role:** Project Manager <br>
-**Contact:** [Github](https://github.com/Sebastian-git), [LinkedIn](https://www.linkedin.com/in/sebastian-cevallos-2917bb16a/)
-
-**Petula Pascall** <br>
-**Role:** Front-End Developer <br>
-**Contact:** [Github](https://github.com/SeePetulaCode), [LinkedIn](https://www.linkedin.com/in/petulapascall/)
-
-**Brandan Herron** <br>
-**Role:** Back-End Developer <br>
-**Contact:** [Github](https://github.com/brandan1989), [LinkedIn](https://www.linkedin.com/in/brandan-herron/)
-
+**Titles** | **Sebastian Cevallos** | **Petula Pascall** | **Brandan Herron** |
+|-|-|-|-|
+|**Role**| Project Manager/Back-end Developer | Front-end Developer | Back-end Developer |
+|**Contact**| [Github](https://github.com/Sebastian-git), [LinkedIn](https://www.linkedin.com/in/sebastian-cevallos-2917bb16a/) | [Github](https://github.com/SeePetulaCode), [LinkedIn](https://www.linkedin.com/in/petulapascall/) | [Github](https://github.com/brandan1989), [LinkedIn](https://www.linkedin.com/in/brandan-herron/) |
 
 
 ### Launch
