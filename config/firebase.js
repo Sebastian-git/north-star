@@ -54,6 +54,12 @@ class Firebase {
     doGetFireball = email => {
         return this.db.collection("fireballs").doc(email).get();
     }
+    
+    signOff = () => {
+        this.auth.signOut().then(function() {
+          }).catch(function(error) {
+          });
+    }
 }
 
 const firebase = new Firebase()

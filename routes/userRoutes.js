@@ -46,12 +46,9 @@ router.post("/login", (req, res) => {
 });
 
 router.post("/logout", (req, res) => {
-  console.log("called");
-  firebase.auth().signOut().then(function() {
-    console.log('Signed Out');
-  }, function(error) {
-    console.error('Sign Out Error', error);
-  });
+  console.log("CALLED LOGOUT");
+  firebase.signOff();
+  console.log("redirecting on userRoutes");
   res.redirect("/");
 });
 

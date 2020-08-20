@@ -1,25 +1,25 @@
 <div class="topnav" id="myTopnav">
-    <a href="/">
-        <img class="logo" src="imgs/banner.svg">
-    </a>
-    <% if (user) { %>
-      <form action="/register/logout" method="POST">
-        <a class="browser-nav">Log out</a>
-      </form>
-    <% } else { %>
-    <a href="login"  class="browser-nav" >Log In</a>
-    <a href="signup"  class="browser-nav" >Sign Up</a>
-    <% } %>
-    <a href="about"  class="browser-nav" >About</a>
-    <% if (user) { %>
-    <a href="favorites"  class="browser-nav" ><i class="fa fa-star-o" aria-hidden="true"></i></a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars  fa-sm"  fa-sm></i>
-    </a>
-    <% } else { %>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars  fa-sm"  fa-sm></i>
-    </a>
-    <% } %>
-  </div>
+  <a href="/">
+      <img class="logo" src="imgs/banner.svg">
+  </a>
+  <% if (user) { %>
+    <form action="/register/logout" method="POST">
+      <button class="browser-nav" id="log-out">Log out</button>
+    </form>
+  <% } else { %>
+  <a href="login"  class="browser-nav" >Log In</a>
+  <a href="signup"  class="browser-nav" >Sign Up</a>
+  <% } %>
+  <a href="about"  class="browser-nav" >About</a>
+  <% if (user) { %>
+  <a href="favorites"  class="browser-nav" ><i class="fa fa-star-o" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars  fa-sm"  fa-sm></i>
+  </a>
+  <% } else { %>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars  fa-sm"  fa-sm></i>
+  </a>
+  <% } %>
+</div>
 
   <script>
   function myFunction() {
