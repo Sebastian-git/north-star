@@ -68,10 +68,6 @@ li {
     float: right;
 }
 
-
-
-
-
 #signup-title {
     color: #f0d9ab;
     text-align: center;
@@ -109,6 +105,21 @@ hr {
     width: 80%;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+#log-out {
+    background: none;
+    border: none;
+    padding: 0!important;
+    font-family: arial, sans-serif;
+    color: white;
+    cursor: pointer;
+    font-size: 19px;
+
+    overflow: hidden;
+    background-color: transparent;
+    margin: 30px 20px 0px 5px;
+    padding: 10px;
 }
 
 /* Search */
@@ -295,10 +306,13 @@ input[type=date] {
     font-size: 24px;
     cursor: pointer;
     align-content: center;
+    outline: none;
 }
 
 .button-star:active {
     color: yellow;
+    border: none;
+    outline: none;
 }
 
 .logo {
