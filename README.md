@@ -1,4 +1,4 @@
-# Snap Observatory
+# <a name="title"></a> Snap Observatory
 
 ### Introduction
 North Star is the name of [our](#members) group in the Snapchat Engineering Academy, which developed the website "Snao Observatory". This website uses the [NASA Fireball API](https://ssd-api.jpl.nasa.gov/doc/fireball.html) to display relevant data fireballs ("a large bright meteor") which will be explained in more detail later. Users can create accounts to save their favorite data sets in order to look back at later. This group project is meant to be displayed to a panel of Snap employees and graded on how well it would perform as a [Snap Mini](https://minis.snapchat.com/) upon further integration in a two week long hackathon.
@@ -102,12 +102,12 @@ This function takes a fireball and email as parameters, checks if the email exis
 
 
 ### Launch
-HTML 5, CSS 3, Javascript 3
-Node.js 12.18.3, Nodemon 2.0.4, Node 14.8.0, Express 4.17.1, Express-Session 1.17.1, Axios 0.19.2, Body-Parser 1.19.0
-Firebase 7.18.0, VS Code 1.48
+HTML 5, CSS 3, Javascript 3 <br>
+Node.js 12.18.3, Nodemon 2.0.4, Node 14.8.0, Express 4.17.1, Express-Session 1.17.1, Axios 0.19.2, Body-Parser 1.19.0 <br>
+Firebase 7.18.0, VS Code 1.48 <br>
 
 ### Status: 
 
 In progress
 
-#### [back to the top](#Snap Observatory)
+#### [back to the top](#title)
