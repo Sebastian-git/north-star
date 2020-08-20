@@ -100,6 +100,6 @@ Firebase 7.18.0, VS Code 1.48 <br>
 
 ### Status: 
 
-In progress
+Complete (unless nominated as a Snap Mini)
 
 #### [back to the top](#title)
