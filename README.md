@@ -100,6 +100,6 @@ Firebase 7.18.0, VS Code 1.48, Heroku <br>
 
 ### Status: 
 
-Complete  (unless nominated as a Snap Mini)
+Complete 
 
 #### [back to the top](#title)
